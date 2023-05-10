@@ -3,7 +3,7 @@ from tkinter import messagebox as MessageBox
 from tkinter import *
 
 
-'''#Importar validaciones
+#Importar validaciones
 from Validaciones.validacionPaises import validacionPais
 from Validaciones.validacionCiudades import validacionCiudades
 from Validaciones.validacionCliente import validacionCliente
@@ -20,11 +20,11 @@ from listasConCodigos import codeClientes
 from listasConCodigos import codeMascotas
 from listasConCodigos import codeVisitas
 from listasConCodigos import codeTratamiento
-from listasConCodigos import codeMedicacion'''
+from listasConCodigos import codeMedicacion
 
 #LISTAS EN MEMORIA
 
-'''ListaDePaises = validacionPais()
+ListaDePaises = validacionPais()
 ListaDeCiudades = validacionCiudades()
 ListaDeClientes = validacionCliente()
 ListaDeMascotas = validacionMascota()
@@ -39,7 +39,7 @@ codigosCiudadesValidos = codeCiudades()
 codigosMascotasValidos = codeMascotas()
 codigosVisitasValidos = codeVisitas()
 codigosTratamientosValidos = codeTratamiento()
-codigosMedicacionValidos = codeMedicacion()'''
+codigosMedicacionValidos = codeMedicacion()
 
 root = Tk()
 root.geometry("1366x768")
@@ -134,10 +134,10 @@ def openAñadirFrame():
         añadirNombreEntry.insert(0,'Ingresar nombre del pais')
         añadirNombreEntry.pack(pady=8, padx=10)
 
-        añadirInformacionButton = Button(ventanaPaisNuevo,text="Añadir informacion")
+        añadirInformacionButton = Button(ventanaPaisNuevo,text="Añadir informacion",command=lambda:sendCountryInfo())
         añadirInformacionButton.pack(pady=8)
 
-        '''def sendCountryInfo():
+        def sendCountryInfo():
              
             codigo = añadirCodigoEntry.get()
             pais = añadirNombreEntry.get()
@@ -148,7 +148,7 @@ def openAñadirFrame():
                 nuevoPais = [codigo, pais]
                 ListaDePaises.append(nuevoPais)
                 codigosPaisesValidos.append(codigo)
-                MessageBox.showinfo("Base de datos", "Se agrego el pais correctamente")'''
+                MessageBox.showinfo("Base de datos", "Se agrego el pais correctamente")
                  
         ventanaPaisNuevo.mainloop()
          
@@ -173,10 +173,10 @@ def openAñadirFrame():
         añadirNombreEntry = Entry(ventanaCiudadNueva, width=200)
         añadirNombreEntry.insert(0,'Ingrese el nombre de la ciudad')
         añadirNombreEntry.pack(pady=8, padx=10)
-        añadirInformacionButton = Button(ventanaCiudadNueva, text="Añadir información")
+        añadirInformacionButton = Button(ventanaCiudadNueva, text="Añadir información",command=lambda:sendCityInfo())
         añadirInformacionButton.pack(pady=8)
 
-        '''def sendCityInfo():
+        def sendCityInfo():
 
             codigoPais = añadirCodigoPaisEntry.get()
             codigoCiudad = añadirCodigoCiudadEntry.get()
@@ -192,7 +192,7 @@ def openAñadirFrame():
                     nuevaCiudad = [codigoPais, codigoCiudad, nombreCiudad]
                     ListaDeCiudades.append(nuevaCiudad)
                     codigosCiudadesValidos.append(codigoCiudad)
-                    MessageBox.showinfo("Base de datos", "La ciudad ha sido ingresada con exito")'''
+                    MessageBox.showinfo("Base de datos", "La ciudad ha sido ingresada con exito")
 
         ventanaCiudadNueva.mainloop()
             
@@ -237,10 +237,10 @@ def openAñadirFrame():
         saldoClienteEntry.insert(0,'Ingrese el saldo del cliente')
         saldoClienteEntry.pack(pady=8)
 
-        añadirInformacionButton = Button(ventanaClienteNuevo, text="Añadir informacion")
+        añadirInformacionButton = Button(ventanaClienteNuevo, text="Añadir informacion",command=lambda:sendClientInfo())
         añadirInformacionButton.pack(pady=8)
 
-        '''def sendClientInfo():
+        def sendClientInfo():
 
             codigoCliente = codeClienteEntry.get()
             nombreCliente = nombreClienteEntry.get()
@@ -275,7 +275,7 @@ def openAñadirFrame():
                         nuevoCliente = [codigoCliente,nombreCliente,direccion,codigoPais,codigoCiudad,telefono,diaVisita,mesVisita,añoVisita,saldo,descuento]
                         ListaDeClientes.append(nuevoCliente)
                         codigosClientesValidos.append(codigoCliente)
-                        MessageBox.showinfo("Base de datos","El cliente ha sido agregado con exito")'''
+                        MessageBox.showinfo("Base de datos","El cliente ha sido agregado con exito")
 
         ventanaClienteNuevo.mainloop()
 
@@ -322,10 +322,10 @@ def openAñadirFrame():
         castradoMascotaEntry.insert(0,'Indique si la mascota esta castrada o no')
         castradoMascotaEntry.pack(pady=8)
 
-        añadirInformacionButton = Button(ventanaMascotaNueva, text="Añadir informacion")
+        añadirInformacionButton = Button(ventanaMascotaNueva, text="Añadir informacion",command=lambda:sendPetInfo())
         añadirInformacionButton.pack(pady=8)
 
-        '''def sendPetInfo():
+        def sendPetInfo():
 
             cliente = codeClienteEntry.get()
             codeMascota = codeAnimalEntry.get()
@@ -348,7 +348,7 @@ def openAñadirFrame():
                     nuevaMascota = [cliente,codeMascota,nombre,tipo,raza,dia,mes,año,sexo,color,castrado]
                     ListaDeMascotas.append(nuevaMascota)
                     codigosMascotasValidos.append(codeMascota)
-                    MessageBox.showinfo("Base de datos","La mascota ha sido agregada con exito")'''
+                    MessageBox.showinfo("Base de datos","La mascota ha sido agregada con exito")
 
         ventanaMascotaNueva.mainloop()
 
@@ -383,10 +383,10 @@ def openAñadirFrame():
         formaPagoEntry.insert(0,'Ingrese la forma de pago')
         formaPagoEntry.pack(pady=8)
 
-        añadirInformacionButton = Button(ventanaVisitaNueva, text='Añadir informacion')
+        añadirInformacionButton = Button(ventanaVisitaNueva, text='Añadir informacion',command=lambda:sendVisitInfo())
         añadirInformacionButton.pack(pady=8)
 
-        '''def sendVisitInfo():
+        def sendVisitInfo():
 
             codVisita = codVisitaEntry.get()
             codAnimal = codAnimalEntry.get()
@@ -405,7 +405,7 @@ def openAñadirFrame():
                     nuevaVisita = [codVisita,codAnimal,ultDia,ultMes,ultAño,totalFactura,formaPago]
                     ListaDeVisitas.APPEND(nuevaVisita)
                     codigosVisitasValidos.append(codVisita)
-                    MessageBox.showinfo('Base de datos',"La visita ha sido agregada con exito")'''
+                    MessageBox.showinfo('Base de datos',"La visita ha sido agregada con exito")
         
         ventanaVisitaNueva.mainloop()
 
@@ -431,9 +431,10 @@ def openAñadirFrame():
         cantidadTratamientoEntry.insert(0,'Ingrese la cantidad disponible')
         cantidadTratamientoEntry.pack(pady=8)
 
-        añadirInformacionButton = Button(ventanaTratamientoNuevo, text='Añadir informacion')
+        añadirInformacionButton = Button(ventanaTratamientoNuevo, text='Añadir informacion',command=lambda:sendTreatInfo())
+        añadirInformacionButton.pack(pady=8)
 
-        '''def sendTreatInfo():
+        def sendTreatInfo():
 
             codTratamiento = codTratamientoEntry.get()
             nombreTratamiento = nombreTratamientoEntry.get()
@@ -446,7 +447,7 @@ def openAñadirFrame():
                 nuevoTratamiento = [codTratamiento, nombreTratamiento, precioTratamiento, cantidad]
                 ListaDeTratamientos.append(nuevoTratamiento)
                 codigosTratamientosValidos.append(codTratamiento)
-                MessageBox.showinfo('Base de datos',"El tratamiento ha sido agregado con exito")'''
+                MessageBox.showinfo('Base de datos',"El tratamiento ha sido agregado con exito")
 
         ventanaTratamientoNuevo.mainloop()
      
@@ -484,10 +485,10 @@ def openAñadirFrame():
         cantidadEntry.insert(0,'Ingrese la cantidad de medicamento')
         cantidadEntry.pack(pady=8)
 
-        añadirInformacionButton = Button(ventanaMedicacionNueva, text="Añadir informacion")
+        añadirInformacionButton = Button(ventanaMedicacionNueva, text="Añadir informacion",command=lambda:sendMedInfo())
         añadirInformacionButton.pack(pady=8)
 
-        '''def sendMedInfo():
+        def sendMedInfo():
 
             codAnimal = codAnimalEntry.get()
             codMedicacion = codMedicacionEntry.get()
@@ -508,7 +509,7 @@ def openAñadirFrame():
                     nuevaMedicacion = [codAnimal,codMedicacion,dia,mes,año,medicamentos,costoUnitario,cantidad,costoTotal]
                     ListaDeMedicacion.append(nuevaMedicacion)
                     codigosMedicacionValidos.append(codMedicacion)
-                    MessageBox.showinfo('Base de datos',"La medicacion ha sido agregada con exito")'''
+                    MessageBox.showinfo('Base de datos',"La medicacion ha sido agregada con exito")
 
         ventanaMedicacionNueva.mainloop()
 
