@@ -48,6 +48,23 @@ agregarCorreo.pack(pady=8)
 agregarTelefono = Entry(agregarContactoFrame, width=200)
 agregarTelefono.insert(0,'Telefono')
 agregarTelefono.pack(pady=8)
+
+agregarContactoButton = Button(root, text="Agregar contacto", command=lambda:sendContactInfo())
+agregarContactoButton.place(x=1000,y=360)
+
+def sendContactInfo():
+
+    global listaDeContactos
+
+    nombre = agregarNombre.get()
+    correo = agregarCorreo.get()
+    telefono = agregarTelefono.get()
+
+    nuevoContacto = [nombre,correo,telefono]
+    listaDeContactos.append(nuevoContacto)
+    MessageBox.showinfo("Base de datos","El contacto se agrego con exito")
+    print (listaDeContactos)
+
 #MANTENIMIENTO
 
 def openMantenimientoMenu():
