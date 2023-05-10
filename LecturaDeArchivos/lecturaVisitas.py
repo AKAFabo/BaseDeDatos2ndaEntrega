@@ -5,7 +5,7 @@ def leerVisitas():
     
 
 
-    with open("Visitas.txt", "r") as listaVisitas:
+    with open("txts/Visitas.txt", "r") as listaVisitas:
         lineas = listaVisitas.readlines()
 
     lista_visitas = [linea.strip() for linea in lineas if linea.strip()]

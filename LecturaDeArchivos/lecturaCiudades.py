@@ -3,7 +3,7 @@ def leerCiudades():
     global cityList
 
 
-    with open("Ciudades.txt", "r") as listaCiudades:
+    with open("txts/Ciudades.txt", "r") as listaCiudades:
         lineas = listaCiudades.readlines()
 
     lista_ciudades = [linea.strip() for linea in lineas if linea.strip()]

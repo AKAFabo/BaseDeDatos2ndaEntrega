@@ -1,7 +1,7 @@
 
 def leerClientes():
 
-    with open("Clientes.txt", "r") as listaClientes:
+    with open("txts/Clientes.txt", "r") as listaClientes:
         lineas = listaClientes.readlines()
 
     lista_clientes = [linea.strip() for linea in lineas if linea.strip()]

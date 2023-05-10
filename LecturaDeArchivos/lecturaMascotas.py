@@ -5,7 +5,7 @@ def leerMascotas():
     
 
 
-    with open("Mascotas.txt", "r") as listaMascotas:
+    with open("txts/Mascotas.txt", "r") as listaMascotas:
         lineas = listaMascotas.readlines()
 
     lista_mascotas = [linea.strip() for linea in lineas if linea.strip()]

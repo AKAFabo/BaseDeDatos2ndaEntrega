@@ -5,7 +5,7 @@ def leerMedicacion():
     
 
 
-    with open("Medicacion.txt", "r") as listaMedicacion:
+    with open("txts/Medicacion.txt", "r") as listaMedicacion:
         lineas = listaMedicacion.readlines()
 
     lista_medicacion = [linea.strip() for linea in lineas if linea.strip()]
