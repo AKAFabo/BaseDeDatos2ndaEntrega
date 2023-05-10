@@ -44,6 +44,7 @@ from tkinter import messagebox as MessageBox
 def añadirPais():
          
         ventanaPaisNuevo = Tk()
+        ventanaPaisNuevo.title("Agregar pais")
         ventanaPaisNuevo.geometry("300x300")
 
         añadirCodigoEntry = Entry(ventanaPaisNuevo, width=200)
@@ -76,6 +77,7 @@ def añadirPais():
 def añadirCiudad():
 
         ventanaCiudadNueva = Tk()
+        ventanaCiudadNueva.title("Agregar ciudad")
         ventanaCiudadNueva.geometry("300x300")
 
         añadirCodigoPaisEntry = Entry(ventanaCiudadNueva, width=200)
@@ -115,6 +117,7 @@ def añadirCiudad():
 def añadirCliente():
 
         ventanaClienteNuevo = Tk()
+        ventanaClienteNuevo.title("Agregar cliente")
         ventanaClienteNuevo.geometry("300x500")
 
         codeClienteEntry = Entry(ventanaClienteNuevo,width=200)
@@ -195,6 +198,7 @@ def añadirCliente():
 def añadirMascota():
 
         ventanaMascotaNueva = Tk()
+        ventanaMascotaNueva.title("Agregar mascota")
         ventanaMascotaNueva.geometry("300x500")
 
         codeClienteEntry = Entry(ventanaMascotaNueva,width=200)
@@ -266,6 +270,7 @@ def añadirMascota():
 def añadirVisitas():
 
         ventanaVisitaNueva = Tk()
+        ventanaVisitaNueva.title("Agregar visita")
         ventanaVisitaNueva.geometry("300x400")
 
         codVisitaEntry = Entry(ventanaVisitaNueva,width=200)
@@ -322,6 +327,7 @@ def añadirVisitas():
 def añadirTratamientos():
 
     ventanaTratamientoNuevo = Tk()
+    ventanaTratamientoNuevo.title("Agregar tratamiento")
     ventanaTratamientoNuevo.geometry("300x300")
 
     codTratamientoEntry = Entry(ventanaTratamientoNuevo,width=200)
@@ -362,6 +368,7 @@ def añadirTratamientos():
 def añadirMedicacion():
 
         ventanaMedicacionNueva = Tk()
+        ventanaMedicacionNueva.title("Agregar mediacion")
         ventanaMedicacionNueva.geometry("300x500")
 
         codAnimalEntry = Entry(ventanaMedicacionNueva,width=200)
