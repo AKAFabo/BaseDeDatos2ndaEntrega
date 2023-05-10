@@ -1045,42 +1045,38 @@ def openSubmenuSaldoMenu():
 
 #IMAGENES MENU
 
-'''ImagenLugares = Image.open("Lugares.png")
-ImagenLugares = ImagenLugares.resize((50,50), Image.ANTIALIAS)
-ImagenLugares = ImageTk.PhotoImage(ImagenLugares)'''
+ImagenLugares = PhotoImage(file='img/Lugares.png')
 
-ImagenLugares = PhotoImage(file='Lugares.png')
+ImagenClinica = PhotoImage(file="img/Clinica.png")
 
-ImagenClinica = PhotoImage(file="Clinica.png")
+ImagenClientes = PhotoImage(file="img/Clientes.png")
 
-ImagenClientes = PhotoImage(file="Clientes.png")
+ImagenFacturacion = PhotoImage(file="img/Facturacion.png")
 
-ImagenFacturacion = PhotoImage(file="Facturacion.png")
-
-ImagenX = PhotoImage(file="X.png")
+ImagenX = PhotoImage(file="img/X.png")
 
 
 #IMAGENES SUBMENUS
 
-ImagenPaises = PhotoImage(file="Paises.png")
+ImagenPaises = PhotoImage(file="img/Paises.png")
 
-ImagenCiudades = PhotoImage(file="Ciudades.png")
+ImagenCiudades = PhotoImage(file="img/Ciudades.png")
 
-ImagenClientesSub = PhotoImage(file="Clientes_SubMenu.png")
+ImagenClientesSub = PhotoImage(file="img/Clientes_SubMenu.png")
 
-ImagenMascotas = PhotoImage(file="Mascotas.png")
+ImagenMascotas = PhotoImage(file="img/Mascotas.png")
 
-ImagenVisitas = PhotoImage(file="Visitas.png")
+ImagenVisitas = PhotoImage(file="img/Visitas.png")
 
-ImagenTratamientos = PhotoImage(file="Tratamientos.png")
+ImagenTratamientos = PhotoImage(file="img/Tratamientos.png")
 
-ImagenMedicamentos = PhotoImage(file="Medicamentos.png")
+ImagenMedicamentos = PhotoImage(file="img/Medicamentos.png")
 
-ImagenFacturacionSub = PhotoImage(file="Facturacion_SubMenu.png")
+ImagenFacturacionSub = PhotoImage(file="img/Facturacion_SubMenu.png")
 
-ImagenDescuentos = PhotoImage(file="Descuentos.png")
+ImagenDescuentos = PhotoImage(file="img/Descuentos.png")
 
-ImagenSaldo = PhotoImage(file="Saldo.png")
+ImagenSaldo = PhotoImage(file="img/Saldo.png")
 
 
 #########   BOTONES MENUS    #########
