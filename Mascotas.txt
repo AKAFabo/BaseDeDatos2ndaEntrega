@@ -1,0 +1,18 @@
+1634;6;Panda;Mamifero;Gigante;17;7;73;Hembra;BlancoyNegro;No;21;3;88
+1950;44;Canguro;Mamifero;Rojo;20;9;24;Macho;Marron;No;11;6;51        #
+1335;18;Gato;Mamifero;Persa;7;0;16;Hembra;Gris;Si;28;8;79        
+1335;49;Leon;Mamifero;Africano;25;3;80;Macho;Amarillo;No;6;5;18        
+1429;37;Halcon;Ave;Peregrino;4;4;90;Macho;Cafe;No;29;8;80
+1361;23;Perro;Mamifero;LabradorRetriever;14;2;24;Macho;Negro;Si;28;1;47
+1361;33;Elefante;Mamifero;Africano;3;9;66;Hembra;Gris;No;17;11;73
+1819;12;Rana;Anfibio;Arlequin;26;6;34;Hembra;Verde;No;17;1;72        #
+1532;8;Oveja;Mamifero;Merina;6;9;14;Macho;Blanco;No;28;11;38
+1824;39;Condor;Ave;Andino;22;11;95;Hembra;Negro;No;2;3;96
+1631;33;Cocodrilo;Reptil;DelNilo;13;10;68;Macho;VerdeyMarron;No;14;11;69        #
+1631;8;Gorila;Mamifero;DeMontaña;8;9;16;Hembra;Negro;No;27;8;90        #
+1105;12;Serpiente;Reptil;Cascabel;11;7;34;Hembra;Marron;No;7;10;85
+1886;23;Jirafa;Mamifero;DeRothschild;4;10;31;Macho;Marron;No;3;6;62        #
+
+9990;44;CodigoRepetido;Mamifero;Pardo;28;9;31;Macho;Marron;No;0;10;34        #
+9999;49;ClienteNoExiste;Pez;Blanco;15;10;47;Hembra;Gris;No;10;3;12        #
+9917;6;CodigoRepetido;Pez;Blanco;15;10;47;Hembra;Gris;No;10;3;12        #

@@ -1,0 +1,12 @@
+45;Aspirina;5500;20
+75;Ibuprofeno;9000;30
+30;Paracetamol;7500;10
+95;Amoxicilina;2000;5
+60;Omeprazol;5000;4
+85;Naproxeno;8000;8
+50;Loratadina;1500;15
+20;Ciprofloxacino;3500;16
+65;Dipirona;9000;50
+5;Dexametasona;2500;35
+30;Acetaminofen;100;90 #
+85;Repetido;2000;100

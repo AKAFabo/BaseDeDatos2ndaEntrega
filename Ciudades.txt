@@ -1,0 +1,101 @@
+0;179;NuevaYork
+0;124;LosAngeles
+0;189;Chicago
+0;131;Houston
+0;179;Phoenix   #NuevaYork
+9;141;Shanghai
+9;168;Pekin
+9;106;Canton
+9;124;Shenzhen  #LosAngeles
+9;195;Chongqing
+17;122;Bombay
+17;132;Delhi
+17;187;Bangalore
+17;148;Hyderabad
+17;116;Chennai
+24;153;Tokio
+24;195;Yokohama   #Chongqing
+24;132;Osaka        #Dehli
+24;142;Nagoya
+24;113;Sapporo
+13;164;Berlin
+13;184;Hamburgo
+13;157;Munich
+13;118;Colonia
+13;106;FrancfortdelMeno   #Canton
+39;183;Londres
+39;194;Birmingham
+39;149;Manchester
+39;108;Liverpool
+39;126;Leeds
+42;192;Paris
+42;126;Lyon   #Leeds
+42;129;Marsella
+42;158;Toulouse
+42;105;Niza
+31;110;Roma
+31;156;Milan
+31;129;Napoles   #Marsella
+31;195;Turin   #Yokohama
+31;153;Palermo  #Tokio
+7;146;SaoPaulo
+7;185;RiodeJaneiro
+7;154;BeloHorizonte
+7;111;Brasilia
+7;118;Salvador   #
+23;174;Toronto
+23;185;Montreal   #
+23;132;Vancouver   #
+23;111;Calgary   #
+23;140;Edmonton
+46;155;Seul
+46;119;Busan
+46;132;Incheon   #
+46;183;Daegu   #
+46;144;Gwangju
+2;164;Moscu   #
+2;124;SanPetersburgo   #
+2;141;Novosibirsk   #
+2;197;Ekaterimburgo
+2;112;NizhnyNovgorod
+49;137;Sidney
+49;196;Melbourne
+49;125;Brisbane
+49;108;Perth   #
+49;199;Adelaida
+14;103;CiudaddeMexico 
+14;154;Guadalajara   #
+14;184;Monterrey   #
+14;141;Tijuana   #
+14;124;Puebla   #
+20;147;Yakarta
+20;151;Surabaya
+20;142;Bandung   #
+20;182;Medan
+20;195;Semarang   #
+38;117;Estambul
+38;168;Ankara   #
+38;131;Esmirna   #
+38;176;Bursa
+38;121;Adana   
+8;189;Teheran   #
+8;165;Mashhad
+8;118;Isfahan   #
+8;148;Tabriz   #
+8;178;Karaj
+45;192;Riad   #
+45;105;Yeda   #
+45;171;Meca
+45;131;Medina   #
+45;184;Dammam   #
+26;152;Madrid
+26;145;Barcelona
+26;174;Valencia   #
+26;116;Sevilla   #
+26;109;Zaragoza
+
+45;142;RepetidoCodCiudad
+20;151;RepetidoCodCiudad
+67;133;PaisNoExiste
+99;199;PaisNoExiste
+1000;87;PaisNoExiste

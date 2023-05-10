@@ -1,0 +1,25 @@
+0;Estados Unidos
+9;China
+17;India
+24;Japon
+13;Alemania
+39;Reino Unido
+42;Francia
+31;Italia
+7;Brasil
+23;Canada
+46;CoreadelSur
+2;Rusia
+49;Australia
+14;Mexico
+20;Indonesia
+38;Turquia
+8;Iran
+45;ArabiaSaudita
+26;Espana
+
+0;Repetido
+20;Repetido
+31;Repetido
+45;Repetido
+45;Repetido

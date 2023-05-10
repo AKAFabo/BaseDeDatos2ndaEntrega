@@ -1,0 +1,29 @@
+Reportes solicitados:
+
+'Reporte: Lista de paises'
+
+['0', 'Estados Unidos']
+['9', 'China']
+['17', 'India']
+['24', 'Japon']
+['13', 'Alemania']
+['39', 'Reino Unido']
+['42', 'Francia']
+['31', 'Italia']
+['7', 'Brasil']
+['23', 'Canada']
+['46', 'CoreadelSur']
+['2', 'Rusia']
+['49', 'Australia']
+['14', 'Mexico']
+['20', 'Indonesia']
+['38', 'Turquia']
+['8', 'Iran']
+['45', 'ArabiaSaudita']
+['26', 'Espana']
+
+
+'Reporte: Lista de ciudades de (2,Rusia)'
+
+['2', '197', 'Ekaterimburgo']
+['2', '112', 'NizhnyNovgorod']
