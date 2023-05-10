@@ -1,13 +1,6 @@
 #IMPORTAR TKINTER
 
 
-
-#IMPORTAR FUNCIONES DE LECTURA
-
-from LecturaDeArchivos.lecturaPaises import leerPaises
-from LecturaDeArchivos.lecturaCiudades import leerCiudades
-from LecturaDeArchivos.lecturaClientes import leerClientes
-
 #IMPORTAR FUNCIONES DE VALIDACION
 
 from Validaciones.validacionPaises import validacionPais
