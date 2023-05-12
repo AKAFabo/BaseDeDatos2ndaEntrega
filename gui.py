@@ -1,3 +1,41 @@
+#Importar validaciones
+from Validaciones.validacionPaises import validacionPais
+from Validaciones.validacionCiudades import validacionCiudades
+from Validaciones.validacionCliente import validacionCliente
+from Validaciones.validacionMascotas import validacionMascota
+from Validaciones.validacionVisitas import validarVisitas
+from Validaciones.validacionTratamientos import validarTratamientos
+from Validaciones.validacionMedicacion import validarMedicacion
+
+#Importar listas con codigos
+from listasConCodigos import codePaises
+from listasConCodigos import nombrePaises
+from listasConCodigos import codeCiudades
+from listasConCodigos import codeClientes
+from listasConCodigos import codeMascotas
+from listasConCodigos import codeVisitas
+from listasConCodigos import codeTratamiento
+from listasConCodigos import codeMedicacion
+
+#LISTAS EN MEMORIA
+
+ListaDePaises = validacionPais()
+ListaDeCiudades = validacionCiudades()
+ListaDeClientes = validacionCliente()
+ListaDeMascotas = validacionMascota()
+ListaDeVisitas = validarVisitas()
+ListaDeTratamientos = validarTratamientos()
+ListaDeMedicacion = validarMedicacion()
+
+codigosPaisesValidos = codePaises()
+nombresPaisesValidos = nombrePaises()
+codigosClientesValidos = codeClientes()  
+codigosCiudadesValidos = codeCiudades()
+codigosMascotasValidos = codeMascotas()
+codigosVisitasValidos = codeVisitas()
+codigosTratamientosValidos = codeTratamiento()
+codigosMedicacionValidos = codeMedicacion()
+
 #Importar libreria de GUI
 from tkinter import messagebox as MessageBox
 from tkinter import *
@@ -5,7 +43,10 @@ from tkinter import *
 #Importar ventanas
 
 from Utils.VentanasAgregar import añadirPais, añadirCiudad, añadirCliente, añadirVisitas, añadirMascota, añadirMedicacion, añadirTratamientos
+from Utils.VentanasEliminar import eliminarPais, eliminarCiudad, eliminarCliente, eliminarMascota, eliminarVisita, eliminarMedicacion, eliminarTratamiento
+from Utils.VentanasBuscar import buscarPais, buscarCiudad, buscarCliente, buscarMascota, buscarMedicacion, buscarTratamiento, buscarVisita
 
+listaDeContactos = []
 
 root = Tk()
 root.geometry("1366x768")
@@ -166,25 +207,25 @@ def openBuscarFrame():
     buscarFrame = Frame(mantenimientoContainer)
     buscarFrame.pack()
 
-    buscarPaisButton = Button(buscarFrame, text="Buscar un pais")
+    buscarPaisButton = Button(buscarFrame, text="Buscar un pais", command=lambda:buscarPais())
     buscarPaisButton.pack(pady=8)
 
-    buscarCiudadButton = Button(buscarFrame, text="Buscar una ciudad")
+    buscarCiudadButton = Button(buscarFrame, text="Buscar una ciudad", command=lambda:buscarCiudad())
     buscarCiudadButton.pack(pady=8)
 
-    buscarClienteButton = Button(buscarFrame, text="Buscar un cliente")
+    buscarClienteButton = Button(buscarFrame, text="Buscar un cliente", command=lambda:buscarCliente())
     buscarClienteButton.pack(pady=8)
 
-    buscarMascotaButton = Button(buscarFrame, text="Buscar una mascota")
+    buscarMascotaButton = Button(buscarFrame, text="Buscar una mascota", command=lambda:buscarMascota())
     buscarMascotaButton.pack(pady=8)
 
-    buscarVisitaButton = Button(buscarFrame, text="Buscar una visita")
+    buscarVisitaButton = Button(buscarFrame, text="Buscar una visita", command=lambda:buscarVisita())
     buscarVisitaButton.pack(pady=8)
 
-    buscarTratamientoButton = Button(buscarFrame, text="Buscar un tratamiento")
+    buscarTratamientoButton = Button(buscarFrame, text="Buscar un tratamiento", command=lambda:buscarTratamiento())
     buscarTratamientoButton.pack(pady=8)
 
-    buscarMedicacionButton = Button(buscarFrame, text="Buscar una mediacion")
+    buscarMedicacionButton = Button(buscarFrame, text="Buscar una mediacion", command=lambda:buscarMedicacion())
     buscarMedicacionButton.pack(pady=8)
 
     cerrarBuscarButton = Button(buscarFrame, text="Cerra ventana", command= buscarFrame.destroy)
@@ -195,25 +236,25 @@ def openEliminarFrame():
     eliminarFrame = Frame(mantenimientoContainer)
     eliminarFrame.pack()
 
-    eliminarPaisButton = Button(eliminarFrame, text="Eliminar un pais")
+    eliminarPaisButton = Button(eliminarFrame, text="Eliminar un pais", command=lambda: eliminarPais())
     eliminarPaisButton.pack(pady=8)
 
-    eliminarCiudadButton = Button(eliminarFrame, text="Eliminar una ciudad")
+    eliminarCiudadButton = Button(eliminarFrame, text="Eliminar una ciudad", command=lambda:eliminarCiudad())
     eliminarCiudadButton.pack(pady=8)
 
-    eliminarClienteButton = Button(eliminarFrame, text="Eliminar un cliente")
+    eliminarClienteButton = Button(eliminarFrame, text="Eliminar un cliente", command=lambda:eliminarCliente())
     eliminarClienteButton.pack(pady=8)
 
-    eliminarMascotaButton = Button(eliminarFrame, text="Eliminar una mascota")
+    eliminarMascotaButton = Button(eliminarFrame, text="Eliminar una mascota", command=lambda:eliminarMascota())
     eliminarMascotaButton.pack(pady=8)
 
-    eliminarVisitaButton = Button(eliminarFrame, text="Eliminar una visita")
+    eliminarVisitaButton = Button(eliminarFrame, text="Eliminar una visita", command=lambda:eliminarVisita())
     eliminarVisitaButton.pack(pady=8)
 
-    eliminarTratamientoButton = Button(eliminarFrame, text="Eliminar un tratamiento")
+    eliminarTratamientoButton = Button(eliminarFrame, text="Eliminar un tratamiento",command=lambda:eliminarTratamiento())
     eliminarTratamientoButton.pack(pady=8)
 
-    eliminarMedicacionButton = Button(eliminarFrame, text="Eliminar una medicacion")
+    eliminarMedicacionButton = Button(eliminarFrame, text="Eliminar una medicacion", command=lambda:eliminarMedicacion())
     eliminarMedicacionButton.pack(pady=8)
 
     cerrarEliminar = Button(eliminarFrame, text="Cerrar ventana", command=eliminarFrame.destroy)
@@ -385,10 +426,10 @@ def openSubmenuPaisesMenu():
     ModificacionPaisButton = Button(modificarPaisesFrame, text="Modificación")
     ModificacionPaisButton.pack(pady=12,padx=10)
 
-    BusquedaPaisButton = Button(modificarPaisesFrame, text="Busqueda")
+    BusquedaPaisButton = Button(modificarPaisesFrame, text="Busqueda", command=lambda:buscarPais())
     BusquedaPaisButton.pack(pady=12,padx=10)
 
-    EliminacionPaisButton =  Button(modificarPaisesFrame, text="Eliminación")
+    EliminacionPaisButton =  Button(modificarPaisesFrame, text="Eliminación",command=lambda:eliminarPais())
     EliminacionPaisButton.pack(pady=12,padx=10)
 
     PaisCerrarButton = Button(modificarPaisesFrame, text="Cerrar",command=submenuPaisesContainer.destroy)
@@ -413,10 +454,10 @@ def openSubmenuPaisesCiudadesMenu():
     ModificacionCiudadButton = Button(modificarCiudadesFrame, text="Modificación")
     ModificacionCiudadButton.pack(pady=12,padx=10)
 
-    BusquedaCiudadButton = Button(modificarCiudadesFrame, text="Busqueda")
+    BusquedaCiudadButton = Button(modificarCiudadesFrame, text="Busqueda", command=lambda:buscarCiudad())
     BusquedaCiudadButton.pack(pady=12,padx=10)
 
-    EliminacionCiudadButton =  Button(modificarCiudadesFrame, text="Eliminación")
+    EliminacionCiudadButton =  Button(modificarCiudadesFrame, text="Eliminación", command=lambda:eliminarCiudad())
     EliminacionCiudadButton.pack(pady=12,padx=10)
 
     CiudadCerrarButton = Button(modificarCiudadesFrame, text="Cerrar",command=submenuCiudadesContainer.destroy)
@@ -443,10 +484,10 @@ def openSubmenuClientesMenu():
     ModificacionPaisButton = Button(modificarClientesFrame, text="Modificación")
     ModificacionPaisButton.pack(pady=12,padx=10)
 
-    BusquedaPaisButton = Button(modificarClientesFrame, text="Busqueda")
+    BusquedaPaisButton = Button(modificarClientesFrame, text="Busqueda", command=lambda:buscarCliente())
     BusquedaPaisButton.pack(pady=12,padx=10)
 
-    EliminacionPaisButton =  Button(modificarClientesFrame, text="Eliminación")
+    EliminacionPaisButton =  Button(modificarClientesFrame, text="Eliminación", command=lambda:eliminarCliente())
     EliminacionPaisButton.pack(pady=12,padx=10)
 
     PaisCerrarButton = Button(modificarClientesFrame, text="Cerrar",command=submenuClientesContainer.destroy)
@@ -471,10 +512,10 @@ def openSubmenuMascotasMenu():
     ModificacionPaisButton = Button(modificarMascotasFrame, text="Modificación")
     ModificacionPaisButton.pack(pady=12,padx=10)
 
-    BusquedaPaisButton = Button(modificarMascotasFrame, text="Busqueda")
+    BusquedaPaisButton = Button(modificarMascotasFrame, text="Busqueda", command=lambda:buscarMascota())
     BusquedaPaisButton.pack(pady=12,padx=10)
 
-    EliminacionPaisButton =  Button(modificarMascotasFrame, text="Eliminación")
+    EliminacionPaisButton =  Button(modificarMascotasFrame, text="Eliminación", command=lambda:eliminarMascota())
     EliminacionPaisButton.pack(pady=12,padx=10)
 
     PaisCerrarButton = Button(modificarMascotasFrame, text="Cerrar",command=submenuMascotasContainer.destroy)
@@ -499,10 +540,10 @@ def openSubmenuVisitasMenu():
     ModificacionPaisButton = Button(modificarVisitasFrame, text="Modificación")
     ModificacionPaisButton.pack(pady=12,padx=10)
 
-    BusquedaPaisButton = Button(modificarVisitasFrame, text="Busqueda")
+    BusquedaPaisButton = Button(modificarVisitasFrame, text="Busqueda",command=lambda: buscarVisita())
     BusquedaPaisButton.pack(pady=12,padx=10)
 
-    EliminacionPaisButton =  Button(modificarVisitasFrame, text="Eliminación")
+    EliminacionPaisButton =  Button(modificarVisitasFrame, text="Eliminación", command=lambda:eliminarVisita())
     EliminacionPaisButton.pack(pady=12,padx=10)
 
     PaisCerrarButton = Button(modificarVisitasFrame, text="Cerrar",command=submenuVisitasContainer.destroy)
@@ -529,10 +570,10 @@ def openSubmenuTratamientosMenu():
     ModificacionPaisButton = Button(modificarTratamientosFrame, text="Modificación")
     ModificacionPaisButton.pack(pady=12,padx=10)
 
-    BusquedaPaisButton = Button(modificarTratamientosFrame, text="Busqueda")
+    BusquedaPaisButton = Button(modificarTratamientosFrame, text="Busqueda", command=lambda:buscarTratamiento())
     BusquedaPaisButton.pack(pady=12,padx=10)
 
-    EliminacionPaisButton =  Button(modificarTratamientosFrame, text="Eliminación")
+    EliminacionPaisButton =  Button(modificarTratamientosFrame, text="Eliminación",command=lambda:eliminarTratamiento())
     EliminacionPaisButton.pack(pady=12,padx=10)
 
     PaisCerrarButton = Button(modificarTratamientosFrame, text="Cerrar",command=submenuTratamientosContainer.destroy)
@@ -557,10 +598,10 @@ def openSubmenuMedicamentosMenu():
     ModificacionPaisButton = Button(modificarMedicamentosFrame, text="Modificación")
     ModificacionPaisButton.pack(pady=12,padx=10)
 
-    BusquedaPaisButton = Button(modificarMedicamentosFrame, text="Busqueda")
+    BusquedaPaisButton = Button(modificarMedicamentosFrame, text="Busqueda", command=lambda:buscarMedicacion())
     BusquedaPaisButton.pack(pady=12,padx=10)
 
-    EliminacionPaisButton =  Button(modificarMedicamentosFrame, text="Eliminación")
+    EliminacionPaisButton =  Button(modificarMedicamentosFrame, text="Eliminación", command=lambda:eliminarMedicacion())
     EliminacionPaisButton.pack(pady=12,padx=10)
 
     PaisCerrarButton = Button(modificarMedicamentosFrame, text="Cerrar",command=submenuMedicamentosContainer.destroy)

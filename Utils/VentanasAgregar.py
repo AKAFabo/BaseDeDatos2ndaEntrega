@@ -1,40 +1,5 @@
-#Importar validaciones
-from Validaciones.validacionPaises import validacionPais
-from Validaciones.validacionCiudades import validacionCiudades
-from Validaciones.validacionCliente import validacionCliente
-from Validaciones.validacionMascotas import validacionMascota
-from Validaciones.validacionVisitas import validarVisitas
-from Validaciones.validacionTratamientos import validarTratamientos
-from Validaciones.validacionMedicacion import validarMedicacion
-
-#Importar listas con codigos
-from listasConCodigos import codePaises
-from listasConCodigos import nombrePaises
-from listasConCodigos import codeCiudades
-from listasConCodigos import codeClientes
-from listasConCodigos import codeMascotas
-from listasConCodigos import codeVisitas
-from listasConCodigos import codeTratamiento
-from listasConCodigos import codeMedicacion
-
-#LISTAS EN MEMORIA
-
-ListaDePaises = validacionPais()
-ListaDeCiudades = validacionCiudades()
-ListaDeClientes = validacionCliente()
-ListaDeMascotas = validacionMascota()
-ListaDeVisitas = validarVisitas()
-ListaDeTratamientos = validarTratamientos()
-ListaDeMedicacion = validarMedicacion()
-
-codigosPaisesValidos = codePaises()
-nombresPaisesValidos = nombrePaises()
-codigosClientesValidos = codeClientes()  
-codigosCiudadesValidos = codeCiudades()
-codigosMascotasValidos = codeMascotas()
-codigosVisitasValidos = codeVisitas()
-codigosTratamientosValidos = codeTratamiento()
-codigosMedicacionValidos = codeMedicacion()
+from main import (ListaDePaises, ListaDeCiudades,ListaDeClientes,ListaDeMascotas,ListaDeVisitas,ListaDeTratamientos,ListaDeMedicacion
+                 ,codigosPaisesValidos,codigosCiudadesValidos,codigosClientesValidos,codigosMascotasValidos,codigosMedicacionValidos,codigosTratamientosValidos,codigosVisitasValidos)
 
 from tkinter import *
 from tkinter import messagebox as MessageBox
@@ -42,7 +7,7 @@ from tkinter import messagebox as MessageBox
 #Ventana de añadir pais
 
 def añadirPais():
-         
+        
         ventanaPaisNuevo = Tk()
         ventanaPaisNuevo.title("Agregar pais")
         ventanaPaisNuevo.geometry("300x300")

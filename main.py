@@ -1,4 +1,3 @@
-#IMPORTAR TKINTER
 
 
 #IMPORTAR FUNCIONES DE VALIDACION
@@ -13,18 +12,7 @@ from Validaciones.validacionMedicacion import validarMedicacion
 
 #IMPORTAR LISTAS CON CODIGOS Y DEMAS VARIABLES
 
-from listasConCodigos import codePaises
-from listasConCodigos import nombrePaises
-
-from listasConCodigos import codeCiudades
-from listasConCodigos import nombreCiudades
-
-from listasConCodigos import codeClientes
-
-from listasConCodigos import codeMascotas
-from listasConCodigos import codeVisitas
-from listasConCodigos import codeTratamiento
-from listasConCodigos import codeMedicacion
+from listasConCodigos import codePaises, codeCiudades, codeClientes,codeMascotas,codeVisitas,codeTratamiento, codeMedicacion
 
 #LISTAS EN MEMORIA
 
@@ -37,7 +25,6 @@ ListaDeTratamientos = validarTratamientos()
 ListaDeMedicacion = validarMedicacion()
 
 codigosPaisesValidos = codePaises()
-nombresPaisesValidos = nombrePaises()
 codigosClientesValidos = codeClientes()  
 codigosCiudadesValidos = codeCiudades()
 codigosMascotasValidos = codeMascotas()
@@ -45,7 +32,7 @@ codigosVisitasValidos = codeVisitas()
 codigosTratamientosValidos = codeTratamiento()
 codigosMedicacionValidos = codeMedicacion()
 
-#MENUS VAN ACA#
+'''#MENUS VAN ACA#
 
 def menuLeer ():
 
@@ -1508,7 +1495,7 @@ def mainMenu ():
         else:
             print("Seleccione una opcion valida")
 
-mainMenu()
+mainMenu()'''
 
 
 
