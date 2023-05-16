@@ -111,6 +111,8 @@ def sendContactInfo():
 def openMantenimientoMenu():
         global mantenimientoContainer
         global añadirFrame
+        global modificarFrame
+        global buscarFrame
 
         #En mantenimiento container se almacena todo lo relacionado con las selecciones de mantenimiento
         mantenimientoContainer = Frame(root)
@@ -119,19 +121,19 @@ def openMantenimientoMenu():
         mantenimientoFrame = Frame(mantenimientoContainer)
         mantenimientoFrame.pack(side='left')
         
-        añadirButton = Button(mantenimientoFrame, text="Añadir",command=lambda: [openAñadirFrame(),añadirFrame.destroy])
+        añadirButton = Button(mantenimientoFrame, text="Añadir",command=lambda: [openAñadirFrame(),modificarFrame.destroy(),buscarFrame.destroy(), eliminarFrame.destroy()])
         añadirButton.pack(pady=12,padx=10)
 
-        modificarButton = Button(mantenimientoFrame, text="Modificar", command=lambda: openModificarFrame())
+        modificarButton = Button(mantenimientoFrame, text="Modificar", command=lambda: [openModificarFrame(),añadirFrame.destroy(),buscarFrame.destroy(), eliminarFrame.destroy()])
         modificarButton.pack(pady=12,padx=10)
 
-        buscarButton = Button(mantenimientoFrame, text="Buscar", command=lambda: openBuscarFrame())
+        buscarButton = Button(mantenimientoFrame, text="Buscar", command=lambda: [openBuscarFrame(),añadirFrame.destroy(),modificarFrame.destroy(), eliminarFrame.destroy()])
         buscarButton.pack(pady=12,padx=10)
 
-        eliminarButton = Button(mantenimientoFrame, text="Eliminar", command=lambda: openEliminarFrame())
+        eliminarButton = Button(mantenimientoFrame, text="Eliminar", command=lambda: [openEliminarFrame(),añadirFrame.destroy(),modificarFrame.destroy(), buscarFrame.destroy()])
         eliminarButton.pack(pady=12,padx=10)
 
-        cerrarVentana = Button(mantenimientoFrame, text="Cerrar ventana", command=mantenimientoContainer.destroy)
+        cerrarVentana = Button(mantenimientoFrame, text="Cerrar ventana", command=lambda: mantenimientoContainer.destroy())
         cerrarVentana.pack(pady=12,padx=10)
 
 
@@ -232,6 +234,8 @@ def openBuscarFrame():
     cerrarBuscarButton.pack(pady=8)
 
 def openEliminarFrame():
+
+    global eliminarFrame
     # Crear el nuevo frame para el menú de eliminar
     eliminarFrame = Frame(mantenimientoContainer)
     eliminarFrame.pack()
