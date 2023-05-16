@@ -333,34 +333,34 @@ def openlugaresMenu():
     lugaresFrame = Frame(lugaresContainer)
     lugaresFrame.pack(side='left')
 
-    PaisesButton = Button(lugaresFrame, text="Países",image=ImagenPaises,command=lambda:[openSubmenuPaisesMenu(),submenuCiudadesContainer.destroy()])
+    PaisesButton = Button(lugaresFrame, text="Países",image=ImagenPaises,compound="top",command=lambda:[openSubmenuPaisesMenu(),submenuCiudadesContainer.destroy()])
     PaisesButton.pack(pady=12,padx=10)
 
-    CiudadesButton = Button(lugaresFrame, text="Ciudades",image=ImagenCiudades,command=lambda:[openSubmenuPaisesCiudadesMenu(),submenuPaisesContainer.destroy()])
+    CiudadesButton = Button(lugaresFrame, text="Ciudades",image=ImagenCiudades,compound="top",command=lambda:[openSubmenuPaisesCiudadesMenu(),submenuPaisesContainer.destroy()])
     CiudadesButton.pack(pady=12,padx=10)
 
-    lugaresCerrarButton = Button(lugaresFrame, text="Cerrar",image=ImagenX,command=lambda:[lugaresContainer.destroy(),submenuPaisesContainer.destroy(),submenuCiudadesContainer.destroy()])
+    lugaresCerrarButton = Button(lugaresFrame, text="Cerrar",image=ImagenX,compound="top",command=lambda:[lugaresContainer.destroy(),submenuPaisesContainer.destroy(),submenuCiudadesContainer.destroy()])
     lugaresCerrarButton.pack(pady=12,padx=10)
 
 def openclientesMenu(): 
     global clientesContainer
     
     clientesContainer = Frame(root)
-    clientesContainer.place(x=430,y=400)
+    clientesContainer.place(x=420,y=400)
 
     clientesFrame = Frame(clientesContainer)
     clientesFrame.pack(side='left')
 
-    clientesButton = Button(clientesFrame, text="Clientes",image=ImagenClientesSub,command=lambda:[openSubmenuClientesMenu(),submenuMascotasContainer.destroy(),submenuVisitasContainer.destroy()])
+    clientesButton = Button(clientesFrame, text="Clientes",image=ImagenClientesSub,compound="top",command=lambda:[openSubmenuClientesMenu(),submenuMascotasContainer.destroy(),submenuVisitasContainer.destroy()])
     clientesButton.pack(pady=12,padx=10)
 
-    mascotasButton = Button(clientesFrame, text="Mascotas",image=ImagenMascotas,command=lambda:[openSubmenuMascotasMenu(),submenuClientesContainer.destroy(),submenuVisitasContainer.destroy()])
+    mascotasButton = Button(clientesFrame, text="Mascotas",image=ImagenMascotas,compound="top",command=lambda:[openSubmenuMascotasMenu(),submenuClientesContainer.destroy(),submenuVisitasContainer.destroy()])
     mascotasButton.pack(pady=12,padx=10)
 
-    VisitasButton = Button(clientesFrame, text="Visitas",image=ImagenVisitas,command=lambda:[openSubmenuVisitasMenu(),submenuClientesContainer.destroy(),submenuMascotasContainer.destroy()])
+    VisitasButton = Button(clientesFrame, text="Visitas",image=ImagenVisitas,compound="top",command=lambda:[openSubmenuVisitasMenu(),submenuClientesContainer.destroy(),submenuMascotasContainer.destroy()])
     VisitasButton.pack(pady=12,padx=10)
 
-    clientesCerrarButton = Button(clientesFrame, text="Cerrar",image=ImagenX,command=lambda:[clientesContainer.destroy(),submenuClientesContainer.destroy(),submenuMascotasContainer.destroy(),submenuVisitasContainer.destroy()])
+    clientesCerrarButton = Button(clientesFrame, text="Cerrar",image=ImagenX,compound="top",command=lambda:[clientesContainer.destroy(),submenuClientesContainer.destroy(),submenuMascotasContainer.destroy(),submenuVisitasContainer.destroy()])
     clientesCerrarButton.pack(pady=12,padx=10)
 
 def openclinicaMenu():
@@ -372,34 +372,34 @@ def openclinicaMenu():
     clinicaFrame = Frame(clinicaContainer)
     clinicaFrame.pack(side='left')
 
-    tratamientosButton = Button(clinicaFrame, text="Tratamientos",image=ImagenTratamientos,command=lambda:[openSubmenuTratamientosMenu(),submenuMedicamentosContainer.destroy()])
+    tratamientosButton = Button(clinicaFrame, text="Tratamientos",image=ImagenTratamientos,compound="top",command=lambda:[openSubmenuTratamientosMenu(),submenuMedicamentosContainer.destroy()])
     tratamientosButton.pack(pady=12,padx=10)
 
-    medicamentosButton = Button(clinicaFrame, text="Medicamentos",image=ImagenMedicamentos,command=lambda:[openSubmenuMedicamentosMenu(),submenuTratamientosContainer.destroy()])
+    medicamentosButton = Button(clinicaFrame, text="Medicamentos",image=ImagenMedicamentos,compound="top",command=lambda:[openSubmenuMedicamentosMenu(),submenuTratamientosContainer.destroy()])
     medicamentosButton.pack(pady=12,padx=10)
 
-    clinicaCerrarButton = Button(clinicaFrame, text="Cerrar",image=ImagenX,command=lambda:[clinicaContainer.destroy(),submenuTratamientosContainer.destroy(),submenuMedicamentosContainer.destroy()])
+    clinicaCerrarButton = Button(clinicaFrame, text="Cerrar",image=ImagenX,compound="top",command=lambda:[clinicaContainer.destroy(),submenuTratamientosContainer.destroy(),submenuMedicamentosContainer.destroy()])
     clinicaCerrarButton.pack(pady=12,padx=10)
 
 def openfacturacionMenu():
     global facturacionContainer
 
     facturacionContainer = Frame(root)
-    facturacionContainer.place(x=1070,y=400)
+    facturacionContainer.place(x=1120,y=400)
 
     facturacionFrame = Frame(facturacionContainer)
     facturacionFrame.pack(side='left')
 
-    facturacionButton = Button(facturacionFrame, text="Facturación",image=ImagenFacturacionSub,command=lambda:[openSubmenuFacturacionMenu(),submenuDescuentosContainer.destroy(),submenuSaldoContainer.destroy()])
+    facturacionButton = Button(facturacionFrame, text="Facturación",image=ImagenFacturacionSub,compound="top",command=lambda:[openSubmenuFacturacionMenu(),submenuDescuentosContainer.destroy(),submenuSaldoContainer.destroy()])
     facturacionButton.pack(pady=12,padx=10)
 
-    descuentoButton = Button(facturacionFrame, text="Descuento",image=ImagenDescuentos,command=lambda:[openSubmenuDescuentosMenu(),submenuFacturacionContainer.destroy(),submenuSaldoContainer.destroy()])
+    descuentoButton = Button(facturacionFrame, text="Descuento",image=ImagenDescuentos,compound="top",command=lambda:[openSubmenuDescuentosMenu(),submenuFacturacionContainer.destroy(),submenuSaldoContainer.destroy()])
     descuentoButton.pack(pady=12,padx=10)
 
-    saldoButton = Button(facturacionFrame, text="Saldo",image=ImagenSaldo,command=lambda:[openSubmenuSaldoMenu(),submenuFacturacionContainer.destroy(),submenuDescuentosContainer.destroy()])
+    saldoButton = Button(facturacionFrame, text="Saldo",image=ImagenSaldo,compound="top",command=lambda:[openSubmenuSaldoMenu(),submenuFacturacionContainer.destroy(),submenuDescuentosContainer.destroy()])
     saldoButton.pack(pady=12,padx=10)
 
-    facturacionCerrarButton = Button(facturacionFrame, text="Cerrar",image=ImagenX,command=lambda:[facturacionContainer.destroy(),submenuFacturacionContainer.destroy(),submenuDescuentosContainer.destroy(),submenuSaldoContainer.destroy()])
+    facturacionCerrarButton = Button(facturacionFrame, text="Cerrar",image=ImagenX,compound="top",command=lambda:[facturacionContainer.destroy(),submenuFacturacionContainer.destroy(),submenuDescuentosContainer.destroy(),submenuSaldoContainer.destroy()])
     facturacionCerrarButton.pack(pady=12,padx=10)
 
 
@@ -470,7 +470,7 @@ def openSubmenuClientesMenu():
     global submenuClientesContainer
 
     submenuClientesContainer = Frame(root)
-    submenuClientesContainer.place(x=500,y=370)
+    submenuClientesContainer.place(x=500,y=365)
 
     modificarClientesFrame = Frame(submenuClientesContainer)
     modificarClientesFrame.pack(side='left')
@@ -556,7 +556,7 @@ def openSubmenuTratamientosMenu():
     global submenuTratamientosContainer
 
     submenuTratamientosContainer = Frame(root)
-    submenuTratamientosContainer.place(x=850,y=370)
+    submenuTratamientosContainer.place(x=868,y=370)
 
     modificarTratamientosFrame = Frame(submenuTratamientosContainer)
     modificarTratamientosFrame.pack(side='left')
@@ -584,7 +584,7 @@ def openSubmenuMedicamentosMenu():
     global submenuMedicamentosContainer
 
     submenuMedicamentosContainer = Frame(root)
-    submenuMedicamentosContainer.place(x=850,y=370)
+    submenuMedicamentosContainer.place(x=868,y=370)
 
     modificarMedicamentosFrame = Frame(submenuMedicamentosContainer)
     modificarMedicamentosFrame.pack(side='left')
@@ -614,7 +614,7 @@ def openSubmenuFacturacionMenu():
     global submenuFacturacionContainer
 
     submenuFacturacionContainer =Frame(root)
-    submenuFacturacionContainer.place(x=1170,y=370)
+    submenuFacturacionContainer.place(x=1200,y=370)
 
     modificarFacturacionFrame =Frame(submenuFacturacionContainer)
     modificarFacturacionFrame.pack(side='left')
@@ -642,7 +642,7 @@ def openSubmenuDescuentosMenu():
     global submenuDescuentosContainer
 
     submenuDescuentosContainer = Frame(root)
-    submenuDescuentosContainer.place(x=1170,y=370)
+    submenuDescuentosContainer.place(x=1200,y=370)
 
     modificarDescuentosFrame = Frame(submenuDescuentosContainer)
     modificarDescuentosFrame.pack(side='left')
@@ -670,7 +670,7 @@ def openSubmenuSaldoMenu():
     global submenuSaldoContainer
 
     submenuSaldoContainer = Frame(root)
-    submenuSaldoContainer.place(x=1170,y=370)
+    submenuSaldoContainer.place(x=1200,y=370)
 
     modificarSaldoFrame = Frame(submenuSaldoContainer)
     modificarSaldoFrame.pack(side='left')
@@ -733,30 +733,30 @@ ImagenDescuentos = PhotoImage(file="img/Descuentos.png")
 ImagenSaldo = PhotoImage(file="img/Saldo.png")
 
 
+
 #########   BOTONES MENUS    #########
 # LUGARES
 lugaresButtomFrame = Frame(root)
 lugaresButtomFrame.place(x=0,y=450)
-lugaresButtom = Button(lugaresButtomFrame, text="Lugares",image=ImagenLugares, command=openlugaresMenu)
+lugaresButtom = Button(lugaresButtomFrame, text="Lugares",image=ImagenLugares, compound="top",command=openlugaresMenu)
 lugaresButtom.pack()
 
 # CLIENTES
 clientesButtomFrame = Frame(root)
 clientesButtomFrame.place(x=350,y=450)
-clienteButtom = Button(clientesButtomFrame, text="Clientes",image=ImagenClientes, command=openclientesMenu)
+clienteButtom = Button(clientesButtomFrame, text="Clientes",image=ImagenClientes, compound="top", command=openclientesMenu)
 clienteButtom.pack()
 
 # CLINICA
 clinicaButtomFrame = Frame(root)
 clinicaButtomFrame.place(x=700,y=450)
-clinicaButtom = Button(clinicaButtomFrame, text="Clínica",image=ImagenClinica, command=openclinicaMenu)
+clinicaButtom = Button(clinicaButtomFrame, text="Clínica",image=ImagenClinica, compound="top", command=openclinicaMenu)
 clinicaButtom.pack()
 
 #FACTURACION
 facturacionButtomFrame = Frame(root)
-facturacionButtomFrame.place(x=1000,y=450)
-facturacionButtom = Button(facturacionButtomFrame, text="Facturación",image=ImagenFacturacion, command=openfacturacionMenu)
+facturacionButtomFrame.place(x=1050,y=450)
+facturacionButtom = Button(facturacionButtomFrame, text="Facturación",image=ImagenFacturacion, compound="top", command=openfacturacionMenu)
 facturacionButtom.pack()
-
 
 root.mainloop()
