@@ -17,7 +17,7 @@ def buscarPais():
     buscarEntry.insert(0,"Digite el codigo de pais a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
-    buscarButton = Button(ventanaBuscarPais, text="Buscar pais", command=lambda:searchCountry())
+    buscarButton = Button(ventanaBuscarPais, text="Buscar pais", command=lambda:[searchCountry(),ventanaBuscarPais.destroy()])
     buscarButton.pack(pady=8,padx=8)
 
     def searchCountry():
@@ -47,7 +47,7 @@ def buscarCiudad():
     buscarEntry.insert(0,"Digite el codigo de ciudad a buscar")
     buscarEntry.pack(pady=8,padx=8)
 
-    buscarButton = Button(ventanaBuscarCiudad, text="Buscar ciudad", command=lambda:searchCity())
+    buscarButton = Button(ventanaBuscarCiudad, text="Buscar ciudad", command=lambda:[searchCity(),ventanaBuscarCiudad.destroy()])
     buscarButton.pack(pady=8,padx=10)
 
     def searchCity():
@@ -76,7 +76,7 @@ def buscarCliente():
     buscarEntry.insert(0,"Digite el codigo de cliente a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
-    buscarButton = Button(ventanaBuscarCliente, text="Buscar cliente", command=lambda: searchClient())
+    buscarButton = Button(ventanaBuscarCliente, text="Buscar cliente", command=lambda: [searchClient(),ventanaBuscarCliente.destroy()])
     buscarButton.pack(pady=8,padx=10)
 
     def searchClient():
@@ -105,7 +105,7 @@ def buscarMascota():
     buscarEntry.insert(0,"Digite el codigo de mascota a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
-    buscarButton = Button(ventanaBuscarMascota, text="Buscar mascota", command=lambda: searchPet())
+    buscarButton = Button(ventanaBuscarMascota, text="Buscar mascota", command=lambda: [searchPet(),ventanaBuscarMascota.destroy()])
     buscarButton.pack(pady=8,padx=10)
 
     def searchPet():
@@ -134,7 +134,7 @@ def buscarVisita():
     buscarEntry.insert(0,"Digite el codigo de visita a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
-    buscarButton = Button(ventanaBuscarVisita, text="Buscar visita", command=lambda: searchVisit())
+    buscarButton = Button(ventanaBuscarVisita, text="Buscar visita", command=lambda: [searchVisit(),ventanaBuscarVisita.destroy])
     buscarButton.pack(padx=10,pady=8)
 
     def searchVisit():
@@ -163,7 +163,7 @@ def buscarTratamiento():
     buscarEntry.insert(0,"Digite el codigo de tratamiento a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
-    buscarButton = Button(ventanaBuscarTratamiento, text="Buscar tratamiento", command=lambda:searchTreat())
+    buscarButton = Button(ventanaBuscarTratamiento, text="Buscar tratamiento", command=lambda:[searchTreat(),ventanaBuscarTratamiento.destroy()])
     buscarButton.pack(pady=8,padx=10)
 
     def searchTreat():
@@ -192,7 +192,7 @@ def buscarMedicacion():
     buscarEntry.insert(0,"Digite el codigo de medicacion a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
-    buscarButton = Button(ventanaBuscarMedicacion, text="Buscar medicacion", command=lambda:searchMed())
+    buscarButton = Button(ventanaBuscarMedicacion, text="Buscar medicacion", command=lambda:[searchMed(),ventanaBuscarMedicacion.destroy()])
     buscarButton.pack(pady=8,padx=10)
 
     def searchMed():

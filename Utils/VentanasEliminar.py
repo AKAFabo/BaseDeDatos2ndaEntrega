@@ -17,7 +17,7 @@ def eliminarPais():
     eliminarCodigoEntry.insert(0,"Digite el codigo de pais a eliminar")
     eliminarCodigoEntry.pack(pady=8, padx=10)
 
-    eliminarCodigoButton = Button(ventanaPaisEliminado, text="Eliminar pais", command=lambda:deleteCountry())
+    eliminarCodigoButton = Button(ventanaPaisEliminado, text="Eliminar pais", command=lambda:[deleteCountry(),ventanaPaisEliminado.destroy()])
     eliminarCodigoButton.pack(pady=8,padx=10)
 
     def deleteCountry():
@@ -56,7 +56,7 @@ def eliminarCiudad():
     eliminarCodigoEntry.insert(0,"Digite el codigo de ciudad a eliminar")
     eliminarCodigoEntry.pack(pady=8,padx=10)
 
-    eliminarCodigoButton = Button(ventanaCiudadEliminada, text="Eliminar ciudad", command=lambda:deleteCity())
+    eliminarCodigoButton = Button(ventanaCiudadEliminada, text="Eliminar ciudad", command=lambda:[deleteCity(),ventanaCiudadEliminada.destroy()])
     eliminarCodigoButton.pack(pady=8,padx=10)
 
     def deleteCity():
@@ -94,7 +94,7 @@ def eliminarCliente():
     eliminarCodigoEntry.insert(0,"Digite el codigo de cliente a eliminar")
     eliminarCodigoEntry.pack(pady=8,padx=8)
 
-    eliminarCodigoButton = Button(ventanaClienteEliminado, text="Eliminar cliente", command=lambda:deleteClient())
+    eliminarCodigoButton = Button(ventanaClienteEliminado, text="Eliminar cliente", command=lambda:[deleteClient(),ventanaClienteEliminado.destroy()])
     eliminarCodigoButton.pack(pady=8,padx=10)
 
     def deleteClient():
@@ -132,7 +132,7 @@ def eliminarMascota():
     eliminarMascotaEntry.insert(0,"Digite el codigo de mascota a eliminar")
     eliminarMascotaEntry.pack(pady=8,padx=10)
 
-    eliminarMascotaButton = Button(ventanaMascotaEliminada, text="Eliminar mascota", command=lambda:deletePet())
+    eliminarMascotaButton = Button(ventanaMascotaEliminada, text="Eliminar mascota", command=lambda:[deletePet(),ventanaMascotaEliminada.destroy()])
     eliminarMascotaButton.pack(padx=10,pady=8)
 
     def deletePet():
@@ -170,7 +170,7 @@ def eliminarVisita():
     eliminarVisitaEntry.insert(0,"Digite el codigo de visita a eliminar")
     eliminarVisitaEntry.pack(pady=8,padx=10)
 
-    eliminarVisitaButton = Button(ventanaEliminarVisita, text="Eliminar visita", command=lambda:deleteVisit())
+    eliminarVisitaButton = Button(ventanaEliminarVisita, text="Eliminar visita", command=lambda:[deleteVisit(),ventanaEliminarVisita.destroy()])
     eliminarVisitaButton.pack(pady=8,padx=10)
 
     def deleteVisit():
@@ -208,7 +208,7 @@ def eliminarTratamiento():
     eliminarTratamientoEntry.insert(0,"Digite el codigo de visita a eliminar")
     eliminarTratamientoEntry.pack(pady=8,padx=10)
 
-    eliminarTratamientoButton = Button(ventanaEliminarTratamiento, text="Eliminar tratamiento", command=lambda:deleteTreat())
+    eliminarTratamientoButton = Button(ventanaEliminarTratamiento, text="Eliminar tratamiento", command=lambda:[deleteTreat(),ventanaEliminarTratamiento.destroy()])
     eliminarTratamientoButton.pack(pady=8,padx=10)
 
     def deleteTreat():
@@ -246,7 +246,7 @@ def eliminarMedicacion():
     eliminarMedicacionEntry.insert(0,"Digite el codigo de medicacion a eliminar")
     eliminarMedicacionEntry.pack(padx=10,pady=8)
 
-    eliminarMedicacionButton = Button(ventanaEliminarMedicacion, text="Eliminar medicacion", command=lambda:deleteMed())
+    eliminarMedicacionButton = Button(ventanaEliminarMedicacion, text="Eliminar medicacion", command=lambda:[deleteMed(),ventanaEliminarMedicacion.destroy()])
     eliminarMedicacionButton.pack(pady=8,padx=10)
 
     def deleteMed():

@@ -45,6 +45,7 @@ from tkinter import *
 from Utils.VentanasAgregar import añadirPais, añadirCiudad, añadirCliente, añadirVisitas, añadirMascota, añadirMedicacion, añadirTratamientos
 from Utils.VentanasEliminar import eliminarPais, eliminarCiudad, eliminarCliente, eliminarMascota, eliminarVisita, eliminarMedicacion, eliminarTratamiento
 from Utils.VentanasBuscar import buscarPais, buscarCiudad, buscarCliente, buscarMascota, buscarMedicacion, buscarTratamiento, buscarVisita
+from Utils.ventanasModificar import modificarPais, modificarCiudad, modificarCliente, modificarMascota, modificarVisita, modificarTratamiento,modificarMedicacion
 
 listaDeContactos = []
 
@@ -176,35 +177,39 @@ def openAñadirFrame():
     cerrarAñadir.pack(pady=8)
 
 def openModificarFrame():
+
+    global modificarFrame
     # Crear el nuevo frame para el menú de modificar
     modificarFrame = Frame(mantenimientoContainer)
     modificarFrame.pack()
 
-    modificarPaisButton = Button(modificarFrame, text="Modificar un pais")
+    modificarPaisButton = Button(modificarFrame, text="Modificar un pais",command=lambda:modificarPais())
     modificarPaisButton.pack(pady=8)
 
-    modificarCiudadButton = Button(modificarFrame, text="Modificar una ciudad")
+    modificarCiudadButton = Button(modificarFrame, text="Modificar una ciudad",command=lambda:modificarCiudad())
     modificarCiudadButton.pack(pady=8)
 
-    modificarClienteButton = Button(modificarFrame, text="Modificar un cliente")
+    modificarClienteButton = Button(modificarFrame, text="Modificar un cliente",command=lambda:modificarCliente())
     modificarClienteButton.pack(pady=8)
 
-    modificarMascotaButton = Button(modificarFrame, text="Modificar una mascota")
+    modificarMascotaButton = Button(modificarFrame, text="Modificar una mascota",command=lambda:modificarMascota())
     modificarMascotaButton.pack(pady=8)
 
-    modificarVisitaButton = Button(modificarFrame, text="Modificar una visita")
+    modificarVisitaButton = Button(modificarFrame, text="Modificar una visita",command=lambda:modificarVisita())
     modificarVisitaButton.pack(pady=8)
 
-    modificarTratamientoButton = Button(modificarFrame, text="Modificar un tratamiento")
+    modificarTratamientoButton = Button(modificarFrame, text="Modificar un tratamiento",command=lambda:modificarTratamiento())
     modificarTratamientoButton.pack(pady=8)
 
-    modificarMedicacionButton = Button(modificarFrame, text="Modificar una medicacion")
+    modificarMedicacionButton = Button(modificarFrame, text="Modificar una medicacion",command=lambda:modificarMedicacion())
     modificarMedicacionButton.pack(pady=8)
 
     cerrarModificar = Button(modificarFrame, text="Cerrar ventana", command=modificarFrame.destroy)
     cerrarModificar.pack(pady=8)
 
 def openBuscarFrame():
+
+    global buscarFrame
     # Crear el nuevo frame para el menú de buscar
     buscarFrame = Frame(mantenimientoContainer)
     buscarFrame.pack()
@@ -350,7 +355,7 @@ def openclientesMenu():
     global clientesContainer
     
     clientesContainer = Frame(root)
-    clientesContainer.place(x=420,y=400)
+    clientesContainer.place(x=420,y=360)
 
     clientesFrame = Frame(clientesContainer)
     clientesFrame.pack(side='left')
@@ -427,7 +432,7 @@ def openSubmenuPaisesMenu():
     insercionPaisButton = Button(modificarPaisesFrame, text="Inserción",command=lambda: añadirPais() )
     insercionPaisButton.pack(pady=12,padx=10)
 
-    ModificacionPaisButton = Button(modificarPaisesFrame, text="Modificación")
+    ModificacionPaisButton = Button(modificarPaisesFrame, text="Modificación",command=lambda:modificarPais())
     ModificacionPaisButton.pack(pady=12,padx=10)
 
     BusquedaPaisButton = Button(modificarPaisesFrame, text="Busqueda", command=lambda:buscarPais())
@@ -455,7 +460,7 @@ def openSubmenuPaisesCiudadesMenu():
     insercionCiudadButton = Button(modificarCiudadesFrame, text="Inserción",command=lambda: añadirCiudad())
     insercionCiudadButton.pack(pady=12,padx=10)
 
-    ModificacionCiudadButton = Button(modificarCiudadesFrame, text="Modificación")
+    ModificacionCiudadButton = Button(modificarCiudadesFrame, text="Modificación",command=lambda:modificarCiudad())
     ModificacionCiudadButton.pack(pady=12,padx=10)
 
     BusquedaCiudadButton = Button(modificarCiudadesFrame, text="Busqueda", command=lambda:buscarCiudad())
@@ -485,7 +490,7 @@ def openSubmenuClientesMenu():
     insercionPaisButton = Button(modificarClientesFrame, text="Inserción", command=lambda:añadirCliente())
     insercionPaisButton.pack(pady=12,padx=10)
 
-    ModificacionPaisButton = Button(modificarClientesFrame, text="Modificación")
+    ModificacionPaisButton = Button(modificarClientesFrame, text="Modificación",command=lambda:modificarCliente())
     ModificacionPaisButton.pack(pady=12,padx=10)
 
     BusquedaPaisButton = Button(modificarClientesFrame, text="Busqueda", command=lambda:buscarCliente())
@@ -513,7 +518,7 @@ def openSubmenuMascotasMenu():
     insercionPaisButton = Button(modificarMascotasFrame, text="Inserción", command=lambda:añadirMascota())
     insercionPaisButton.pack(pady=12,padx=10)
 
-    ModificacionPaisButton = Button(modificarMascotasFrame, text="Modificación")
+    ModificacionPaisButton = Button(modificarMascotasFrame, text="Modificación",command=lambda:modificarMascota())
     ModificacionPaisButton.pack(pady=12,padx=10)
 
     BusquedaPaisButton = Button(modificarMascotasFrame, text="Busqueda", command=lambda:buscarMascota())
@@ -541,7 +546,7 @@ def openSubmenuVisitasMenu():
     insercionPaisButton = Button(modificarVisitasFrame, text="Inserción",command=lambda: añadirVisitas())
     insercionPaisButton.pack(pady=12,padx=10)
 
-    ModificacionPaisButton = Button(modificarVisitasFrame, text="Modificación")
+    ModificacionPaisButton = Button(modificarVisitasFrame, text="Modificación",command=lambda:modificarVisita())
     ModificacionPaisButton.pack(pady=12,padx=10)
 
     BusquedaPaisButton = Button(modificarVisitasFrame, text="Busqueda",command=lambda: buscarVisita())
@@ -571,7 +576,7 @@ def openSubmenuTratamientosMenu():
     insercionPaisButton = Button(modificarTratamientosFrame, text="Inserción",command=lambda:añadirTratamientos())
     insercionPaisButton.pack(pady=12,padx=10)
 
-    ModificacionPaisButton = Button(modificarTratamientosFrame, text="Modificación")
+    ModificacionPaisButton = Button(modificarTratamientosFrame, text="Modificación",command=lambda:modificarTratamiento())
     ModificacionPaisButton.pack(pady=12,padx=10)
 
     BusquedaPaisButton = Button(modificarTratamientosFrame, text="Busqueda", command=lambda:buscarTratamiento())
@@ -599,7 +604,7 @@ def openSubmenuMedicamentosMenu():
     insercionPaisButton = Button(modificarMedicamentosFrame, text="Inserción",command=lambda:añadirMedicacion())
     insercionPaisButton.pack(pady=12,padx=10)
 
-    ModificacionPaisButton = Button(modificarMedicamentosFrame, text="Modificación")
+    ModificacionPaisButton = Button(modificarMedicamentosFrame, text="Modificación",command=lambda:modificarMedicacion())
     ModificacionPaisButton.pack(pady=12,padx=10)
 
     BusquedaPaisButton = Button(modificarMedicamentosFrame, text="Busqueda", command=lambda:buscarMedicacion())

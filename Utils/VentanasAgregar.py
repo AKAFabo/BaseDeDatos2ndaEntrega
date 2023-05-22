@@ -19,7 +19,7 @@ def añadirPais():
         añadirNombreEntry.insert(0,'Ingresar nombre del pais')
         añadirNombreEntry.pack(pady=8, padx=10)
 
-        añadirInformacionButton = Button(ventanaPaisNuevo,text="Añadir informacion",command=lambda:sendCountryInfo())
+        añadirInformacionButton = Button(ventanaPaisNuevo,text="Añadir informacion",command=lambda:[sendCountryInfo(),ventanaPaisNuevo.destroy()])
         añadirInformacionButton.pack(pady=8)
 
         def sendCountryInfo():
@@ -54,7 +54,7 @@ def añadirCiudad():
         añadirNombreEntry = Entry(ventanaCiudadNueva, width=200)
         añadirNombreEntry.insert(0,'Ingrese el nombre de la ciudad')
         añadirNombreEntry.pack(pady=8, padx=10)
-        añadirInformacionButton = Button(ventanaCiudadNueva, text="Añadir información",command=lambda:sendCityInfo())
+        añadirInformacionButton = Button(ventanaCiudadNueva, text="Añadir información",command=lambda:[sendCityInfo(),ventanaCiudadNueva.destroy()])
         añadirInformacionButton.pack(pady=8)
 
         def sendCityInfo():
@@ -116,7 +116,7 @@ def añadirCliente():
         saldoClienteEntry.insert(0,'Ingrese el saldo del cliente')
         saldoClienteEntry.pack(pady=8)
 
-        añadirInformacionButton = Button(ventanaClienteNuevo, text="Añadir informacion",command=lambda:sendClientInfo())
+        añadirInformacionButton = Button(ventanaClienteNuevo, text="Añadir informacion",command=lambda:[sendClientInfo(),ventanaClienteNuevo.destroy()])
         añadirInformacionButton.pack(pady=8)
 
         def sendClientInfo():
@@ -200,7 +200,7 @@ def añadirMascota():
         castradoMascotaEntry.insert(0,'Indique si la mascota esta castrada o no')
         castradoMascotaEntry.pack(pady=8)
 
-        añadirInformacionButton = Button(ventanaMascotaNueva, text="Añadir informacion",command=lambda:sendPetInfo())
+        añadirInformacionButton = Button(ventanaMascotaNueva, text="Añadir informacion",command=lambda:[sendPetInfo(),ventanaMascotaNueva.destroy()])
         añadirInformacionButton.pack(pady=8)
 
         def sendPetInfo():
@@ -260,7 +260,7 @@ def añadirVisitas():
         formaPagoEntry.insert(0,'Ingrese la forma de pago')
         formaPagoEntry.pack(pady=8)
 
-        añadirInformacionButton = Button(ventanaVisitaNueva, text='Añadir informacion',command=lambda:sendVisitInfo())
+        añadirInformacionButton = Button(ventanaVisitaNueva, text='Añadir informacion',command=lambda:[sendVisitInfo(),ventanaVisitaNueva.destroy()])
         añadirInformacionButton.pack(pady=8)
 
         def sendVisitInfo():
@@ -280,7 +280,7 @@ def añadirVisitas():
                     MessageBox.showerror('Error',"El codigo de mascota no existe")
                 else:
                     nuevaVisita = [codVisita,codAnimal,ultDia,ultMes,ultAño,totalFactura,formaPago]
-                    ListaDeVisitas.APPEND(nuevaVisita)
+                    ListaDeVisitas.append(nuevaVisita)
                     codigosVisitasValidos.append(codVisita)
                     MessageBox.showinfo('Base de datos',"La visita ha sido agregada con exito")
         
@@ -308,7 +308,7 @@ def añadirTratamientos():
     cantidadTratamientoEntry.insert(0,'Ingrese la cantidad disponible')
     cantidadTratamientoEntry.pack(pady=8)
 
-    añadirInformacionButton = Button(ventanaTratamientoNuevo, text='Añadir informacion',command=lambda:sendTreatInfo())
+    añadirInformacionButton = Button(ventanaTratamientoNuevo, text='Añadir informacion',command=lambda:[sendTreatInfo(),ventanaTratamientoNuevo.destroy()])
     añadirInformacionButton.pack(pady=8)
 
     def sendTreatInfo():
@@ -350,6 +350,7 @@ def añadirMedicacion():
         ultMesVisitaEntry.pack(pady=8)
         ultAñoVisitaEntry = Entry(ventanaMedicacionNueva,width=200)
         ultAñoVisitaEntry.insert(0,"Ingrese el ultimo año de visita")
+        ultAñoVisitaEntry.pack(pady=8)
         medicamentosEntry = Entry(ventanaMedicacionNueva,width=200)
         medicamentosEntry.insert(0,'Ingrese el medicamento')
         medicamentosEntry.pack(pady=8)
@@ -360,7 +361,7 @@ def añadirMedicacion():
         cantidadEntry.insert(0,'Ingrese la cantidad de medicamento')
         cantidadEntry.pack(pady=8)
 
-        añadirInformacionButton = Button(ventanaMedicacionNueva, text="Añadir informacion",command=lambda:sendMedInfo())
+        añadirInformacionButton = Button(ventanaMedicacionNueva, text="Añadir informacion",command=[lambda:sendMedInfo(), ventanaMedicacionNueva.destroy()])
         añadirInformacionButton.pack(pady=8)
 
         def sendMedInfo():
