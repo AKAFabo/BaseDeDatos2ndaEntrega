@@ -11,10 +11,11 @@ def buscarPais():
 
     ventanaBuscarPais = Tk()
     ventanaBuscarPais.title("Buscar pais")
-    ventanaBuscarPais.geometry("300x100")
+    ventanaBuscarPais.geometry("300x150")
 
+    buscarLabel = Label(ventanaBuscarPais,text="Ingrese el codigo de pais a buscar")
+    buscarLabel.pack(padx=10,pady=8)
     buscarEntry = Entry(ventanaBuscarPais, width=200)
-    buscarEntry.insert(0,"Digite el codigo de pais a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
     buscarButton = Button(ventanaBuscarPais, text="Buscar pais", command=lambda:[searchCountry(),ventanaBuscarPais.destroy()])
@@ -41,10 +42,11 @@ def buscarCiudad():
 
     ventanaBuscarCiudad = Tk()
     ventanaBuscarCiudad.title("Buscar ciudad")
-    ventanaBuscarCiudad.geometry("300x100")
+    ventanaBuscarCiudad.geometry("300x150")
 
+    buscarLabel = Label(ventanaBuscarCiudad,text="Ingrese el codigo de ciudad a buscar")
+    buscarLabel.pack(padx=10,pady=8)
     buscarEntry = Entry(ventanaBuscarCiudad, width=200)
-    buscarEntry.insert(0,"Digite el codigo de ciudad a buscar")
     buscarEntry.pack(pady=8,padx=8)
 
     buscarButton = Button(ventanaBuscarCiudad, text="Buscar ciudad", command=lambda:[searchCity(),ventanaBuscarCiudad.destroy()])
@@ -70,10 +72,11 @@ def buscarCliente():
 
     ventanaBuscarCliente = Tk()
     ventanaBuscarCliente.title("Buscar cliente")
-    ventanaBuscarCliente.geometry("300x100")
+    ventanaBuscarCliente.geometry("300x150")
 
+    buscarLabel = Label(ventanaBuscarCliente,text="Ingrese el codigo de cliente a buscar")
+    buscarLabel.pack(padx=10,pady=8)
     buscarEntry = Entry(ventanaBuscarCliente, width=200)
-    buscarEntry.insert(0,"Digite el codigo de cliente a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
     buscarButton = Button(ventanaBuscarCliente, text="Buscar cliente", command=lambda: [searchClient(),ventanaBuscarCliente.destroy()])
@@ -99,10 +102,11 @@ def buscarMascota():
 
     ventanaBuscarMascota = Tk()
     ventanaBuscarMascota.title("Buscar mascota")
-    ventanaBuscarMascota.geometry("300x100")
+    ventanaBuscarMascota.geometry("300x150")
 
+    buscarLabel = Label(ventanaBuscarMascota,text="Ingrese el codigo de mascota a buscar")
+    buscarLabel.pack(padx=10,pady=8)
     buscarEntry = Entry(ventanaBuscarMascota, width=200)
-    buscarEntry.insert(0,"Digite el codigo de mascota a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
     buscarButton = Button(ventanaBuscarMascota, text="Buscar mascota", command=lambda: [searchPet(),ventanaBuscarMascota.destroy()])
@@ -128,10 +132,11 @@ def buscarVisita():
 
     ventanaBuscarVisita = Tk()
     ventanaBuscarVisita.title("Buscar visita")
-    ventanaBuscarVisita.geometry("300x100")
+    ventanaBuscarVisita.geometry("300x150")
 
+    buscarLabel = Label(ventanaBuscarVisita,text="Ingrese el codigo de visita a buscar")
+    buscarLabel.pack(padx=10,pady=8)
     buscarEntry = Entry(ventanaBuscarVisita, width=200)
-    buscarEntry.insert(0,"Digite el codigo de visita a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
     buscarButton = Button(ventanaBuscarVisita, text="Buscar visita", command=lambda: [searchVisit(),ventanaBuscarVisita.destroy])
@@ -157,10 +162,11 @@ def buscarTratamiento():
 
     ventanaBuscarTratamiento = Tk()
     ventanaBuscarTratamiento.title("Buscar tratamiento")
-    ventanaBuscarTratamiento.geometry("300x100")
+    ventanaBuscarTratamiento.geometry("300x150")
 
+    buscarLabel = Label(ventanaBuscarTratamiento,text="Ingrese el codigo de tratamiento a buscar")
+    buscarLabel.pack(padx=10,pady=8)
     buscarEntry = Entry(ventanaBuscarTratamiento, width=200)
-    buscarEntry.insert(0,"Digite el codigo de tratamiento a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
     buscarButton = Button(ventanaBuscarTratamiento, text="Buscar tratamiento", command=lambda:[searchTreat(),ventanaBuscarTratamiento.destroy()])
@@ -186,10 +192,11 @@ def buscarMedicacion():
 
     ventanaBuscarMedicacion = Tk()
     ventanaBuscarMedicacion.title("Buscar medicacion")
-    ventanaBuscarMedicacion.geometry("300x100")
+    ventanaBuscarMedicacion.geometry("300x150")
 
+    buscarLabel = Label(ventanaBuscarMedicacion,text="Ingrese el codigo de medicacion a buscar")
+    buscarLabel.pack(padx=10,pady=8)
     buscarEntry = Entry(ventanaBuscarMedicacion, width=200)
-    buscarEntry.insert(0,"Digite el codigo de medicacion a buscar")
     buscarEntry.pack(pady=8,padx=10)
 
     buscarButton = Button(ventanaBuscarMedicacion, text="Buscar medicacion", command=lambda:[searchMed(),ventanaBuscarMedicacion.destroy()])

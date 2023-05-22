@@ -10,13 +10,16 @@ def añadirPais():
         
         ventanaPaisNuevo = Tk()
         ventanaPaisNuevo.title("Agregar pais")
-        ventanaPaisNuevo.geometry("300x300")
+        ventanaPaisNuevo.geometry("300x500")
 
+        codigoLabel = Label(ventanaPaisNuevo, text="Indique el codigo de pais a agregar")
+        codigoLabel.pack(padx=10,pady=8)
         añadirCodigoEntry = Entry(ventanaPaisNuevo, width=200)
-        añadirCodigoEntry.insert(0, 'Ingresar codigo del pais')
         añadirCodigoEntry.pack(pady=12, padx=10)
+
+        nombreLabel = Label(ventanaPaisNuevo, text="Indique el nombre del pais a agregar")
+        nombreLabel.pack(padx=10,pady=8)
         añadirNombreEntry = Entry(ventanaPaisNuevo,  width=200)
-        añadirNombreEntry.insert(0,'Ingresar nombre del pais')
         añadirNombreEntry.pack(pady=8, padx=10)
 
         añadirInformacionButton = Button(ventanaPaisNuevo,text="Añadir informacion",command=lambda:[sendCountryInfo(),ventanaPaisNuevo.destroy()])
@@ -43,17 +46,23 @@ def añadirCiudad():
 
         ventanaCiudadNueva = Tk()
         ventanaCiudadNueva.title("Agregar ciudad")
-        ventanaCiudadNueva.geometry("300x300")
+        ventanaCiudadNueva.geometry("300x500")
 
+        codigoPais = Label(ventanaCiudadNueva,text="Indique el codigo de pais")
+        codigoPais.pack(padx=10,pady=8)
         añadirCodigoPaisEntry = Entry(ventanaCiudadNueva, width=200)
-        añadirCodigoPaisEntry.insert(0,'Ingrese el codigo del pais')
         añadirCodigoPaisEntry.pack(pady=12, padx=10)
+
+        codigoCiudad = Label(ventanaCiudadNueva, text="Indique el codigo de ciudad a agregar")
+        codigoCiudad.pack(padx=10,pady=8)
         añadirCodigoCiudadEntry = Entry(ventanaCiudadNueva, width=200)
-        añadirCodigoCiudadEntry.insert(0,'Ingrese el codigo de ciudad')
         añadirCodigoCiudadEntry.pack(pady=8, padx=10)
+
+        nombreLabel = Label(ventanaCiudadNueva, text="Indique el nombre la ciudad a agregar")
+        nombreLabel.pack(padx=10,pady=8)
         añadirNombreEntry = Entry(ventanaCiudadNueva, width=200)
-        añadirNombreEntry.insert(0,'Ingrese el nombre de la ciudad')
         añadirNombreEntry.pack(pady=8, padx=10)
+
         añadirInformacionButton = Button(ventanaCiudadNueva, text="Añadir información",command=lambda:[sendCityInfo(),ventanaCiudadNueva.destroy()])
         añadirInformacionButton.pack(pady=8)
 
@@ -83,37 +92,56 @@ def añadirCliente():
 
         ventanaClienteNuevo = Tk()
         ventanaClienteNuevo.title("Agregar cliente")
-        ventanaClienteNuevo.geometry("300x500")
+        ventanaClienteNuevo.geometry("300x800")
 
+        codeClienteLabel = Label(ventanaClienteNuevo,text="Indique el codigo de cliente a agregar")
+        codeClienteLabel.pack(padx=10,pady=8)
         codeClienteEntry = Entry(ventanaClienteNuevo,width=200)
-        codeClienteEntry.insert(0,'Inserte el codigo del cliente')
         codeClienteEntry.pack(pady=8,padx=10)
+
+        nombreLabel = Label(ventanaClienteNuevo,text="Indique el nombre del cliente a agregar")
+        nombreLabel.pack(padx=10,pady=8)
         nombreClienteEntry = Entry(ventanaClienteNuevo,width=200)    
-        nombreClienteEntry.insert(0,'Ingrese el nombre del cliente')
         nombreClienteEntry.pack(pady=8,padx=10)
+
+        direccionLabel = Label(ventanaClienteNuevo, text="Indique la direccion del cliente a agregar")
+        direccionLabel.pack(padx=10,pady=8)
         direccionClienteEntry = Entry(ventanaClienteNuevo,width=200)
-        direccionClienteEntry.insert(0,'Ingrese la direccion del cliente')
         direccionClienteEntry.pack(pady=8,padx=10)
+
+        codePaisLabel = Label(ventanaClienteNuevo,text="Indique el codigo de pais del cliente")
+        codePaisLabel.pack(padx=10,pady=8)
         codigoPaisEntry = Entry(ventanaClienteNuevo,width=200)
-        codigoPaisEntry.insert(0,'Ingrese el codigo de pais')
         codigoPaisEntry.pack(pady=8,padx=10)
+
+        codeCiudadLabel = Label(ventanaClienteNuevo,text="Indique el codigo de ciudad del cliente")
+        codeCiudadLabel.pack(padx=10,pady=8)
         codigoCiudadEntry = Entry(ventanaClienteNuevo,width=200)
-        codigoCiudadEntry.insert(0,'Ingrese el codigo de ciudad')
         codigoCiudadEntry.pack(pady=8,padx=10)
+
+        telLable = Label(ventanaClienteNuevo, text="Indique el telefono del cliente a agregar")
+        telLable.pack(padx=10,pady=8)
         telClienteEntry = Entry(ventanaClienteNuevo,width=200)
-        telClienteEntry.insert(0,'Ingrese el telefono del ciente')
         telClienteEntry.pack(pady=8,padx=10)
+
+        ultDia = Label(ventanaClienteNuevo,text="Indique el ultimo dia de visita del cliente")
+        ultDia.pack(padx=10,pady=8)
         ultDiaVisita = Entry(ventanaClienteNuevo, width=200)
-        ultDiaVisita.insert(0,'Ingrese el ultimo dia de visita')
         ultDiaVisita.pack(pady=8,padx=10)
+
+        ultMes = Label(ventanaClienteNuevo,text="Indique el ultimo mes de visita del cliente")
+        ultMes.pack(padx=10,pady=8)
         ultMesVisita = Entry(ventanaClienteNuevo, width=200)
-        ultMesVisita.insert(0,'Ingrese el ultimo mes de visita')
         ultMesVisita.pack(pady=8,padx=10)
+
+        ultYear = Label(ventanaClienteNuevo,text="Indique el ultimo año de visita del cliente")
+        ultYear.pack(padx=10,pady=8)
         ultAñoVisita = Entry(ventanaClienteNuevo,width=200)
-        ultAñoVisita.insert(0,'Ingrese el ultimo año de visita')
         ultAñoVisita.pack(pady=8,padx=10)
+
+        saldoLabel = Label(ventanaClienteNuevo,text="Indique el saldo del cliente a agregar")
+        saldoLabel.pack(padx=10,pady=8)
         saldoClienteEntry =  Entry(ventanaClienteNuevo, width=200)  
-        saldoClienteEntry.insert(0,'Ingrese el saldo del cliente')
         saldoClienteEntry.pack(pady=8)
 
         añadirInformacionButton = Button(ventanaClienteNuevo, text="Añadir informacion",command=lambda:[sendClientInfo(),ventanaClienteNuevo.destroy()])
@@ -164,40 +192,61 @@ def añadirMascota():
 
         ventanaMascotaNueva = Tk()
         ventanaMascotaNueva.title("Agregar mascota")
-        ventanaMascotaNueva.geometry("300x500")
+        ventanaMascotaNueva.geometry("300x750")
 
+        codeCliente = Label(ventanaMascotaNueva, text="Indique el codigo del cliente")
+        codeCliente.pack(padx=10)
         codeClienteEntry = Entry(ventanaMascotaNueva,width=200)
-        codeClienteEntry.insert(0,'Ingrese el codigo del cliente')
         codeClienteEntry.pack(pady=8)
+
+        codeAnimalLabel = Label(ventanaMascotaNueva,text="Indique el codigo de la mascota a agregar")
+        codeAnimalLabel.pack(padx=10)
         codeAnimalEntry = Entry(ventanaMascotaNueva, width=200)
-        codeAnimalEntry.insert(0,'Ingrese el codigo de la mascota')
         codeAnimalEntry.pack(pady=8)
+
+        nombreLabel = Label(ventanaMascotaNueva, text="Indique el nombre de la mascota a agregar")
+        nombreLabel.pack(padx=10)
         nombreAnimalEntry = Entry(ventanaMascotaNueva, width=200)
-        nombreAnimalEntry.insert(0,'Ingrese el nombre de la mascota')
         nombreAnimalEntry.pack(pady=8)
+
+        tipoLabel = Label(ventanaMascotaNueva, text="Indique el tipo de la mascota a agregar")
+        tipoLabel.pack(padx=10)
         tipoAnimalEntry = Entry(ventanaMascotaNueva, width=200)
-        tipoAnimalEntry.insert(0,'Ingrese el tipo de mascota')
         tipoAnimalEntry.pack(pady=8)
+
+        razaLabel = Label(ventanaMascotaNueva,text="Indique la raza de la mascota a agregar")
+        razaLabel.pack(padx=10)
         razaAnimalEntry = Entry(ventanaMascotaNueva, width=200)
-        razaAnimalEntry.insert(0,'Ingrese la raza de la mascota')
         razaAnimalEntry.pack(pady=8)
+
+        diaLabel = Label(ventanaMascotaNueva,text="Indique el dia de nacimiento")
+        diaLabel.pack(padx=10)
         diaNacimiento = Entry(ventanaMascotaNueva, width=200)
-        diaNacimiento.insert(0,'Ingrese el dia de nacimiento')
         diaNacimiento.pack(pady=8)
+
+        mesLabel = Label(ventanaMascotaNueva,text="Indique el mes de nacimiento de la mascota")
+        mesLabel.pack(padx=10)
         mesNacimiento = Entry(ventanaMascotaNueva,width=200)
-        mesNacimiento.insert(0,'Ingrese el mes de nacimiento')
         mesNacimiento.pack(pady=8)
+
+        yearLabel = Label(ventanaMascotaNueva,text="Indique el año de nacimiento de la mascota")
+        yearLabel.pack(padx=10)
         añoNacimiento = Entry(ventanaMascotaNueva, width=200)
-        añoNacimiento.insert(0,'Ingrese el año de nacimiento')
         añoNacimiento.pack(pady=8)
+
+        sexoLabel = Label(ventanaMascotaNueva,text="Indique el sexo de la mascota a agregar")
+        sexoLabel.pack(padx=10)
         sexoAnimalEntry = Entry(ventanaMascotaNueva,width=200)
-        sexoAnimalEntry.insert(0,'Ingrese el sexo del animal')
         sexoAnimalEntry.pack(pady=8)
+
+        colorLabel = Label(ventanaMascotaNueva,text="Indique el color de la mascota a agregar")
+        colorLabel.pack(padx=10)
         colorMascotaEntry = Entry(ventanaMascotaNueva, width=200)   
-        colorMascotaEntry.insert(0,'Ingrese el color de la mascota')
         colorMascotaEntry.pack(pady=8)
+
+        castradoLabel = Label(ventanaMascotaNueva,text="Indique si la mascota esta castrada o no")
+        castradoLabel.pack(padx=10)
         castradoMascotaEntry = Entry(ventanaMascotaNueva,width=200)
-        castradoMascotaEntry.insert(0,'Indique si la mascota esta castrada o no')
         castradoMascotaEntry.pack(pady=8)
 
         añadirInformacionButton = Button(ventanaMascotaNueva, text="Añadir informacion",command=lambda:[sendPetInfo(),ventanaMascotaNueva.destroy()])
@@ -236,28 +285,41 @@ def añadirVisitas():
 
         ventanaVisitaNueva = Tk()
         ventanaVisitaNueva.title("Agregar visita")
-        ventanaVisitaNueva.geometry("300x400")
+        ventanaVisitaNueva.geometry("300x600")
 
+        visitaLabel = Label(ventanaVisitaNueva,text="Indique el codigo de visita a agregar")
+        visitaLabel.pack(padx=10,pady=8)
         codVisitaEntry = Entry(ventanaVisitaNueva,width=200)
-        codVisitaEntry.insert(0,'Ingrese el codigo de la visita')
         codVisitaEntry.pack(pady=8)
+
+        animalLabel = Label(ventanaVisitaNueva,text="Indique el codigo de la mascota")
+        animalLabel.pack(padx=10,pady=8)
         codAnimalEntry = Entry(ventanaVisitaNueva,width=200)
-        codAnimalEntry.insert(0,'Ingrese el codigo de  la mascota')
         codAnimalEntry.pack(pady=8)
+
+        diaLabel = Label(ventanaVisitaNueva,text="Indique el ultimo dia de visita")
+        diaLabel.pack(padx=10,pady=8)
         ultDiaVisitaEntry = Entry(ventanaVisitaNueva,width=200)
-        ultDiaVisitaEntry.insert(0,'Ingrese el ultimo dia de visita')
         ultDiaVisitaEntry.pack(pady=8)
+
+        mesLabel = Label(ventanaVisitaNueva,text="Indique el ultimo mes de visita")
+        mesLabel.pack(padx=10,pady=8)
         ultMesVisitaEntry = Entry(ventanaVisitaNueva,width=200)
-        ultMesVisitaEntry.insert(0,'Ingrese el ultimo mes de visita')
         ultMesVisitaEntry.pack(pady=8)
+
+        ultAño = Label(ventanaVisitaNueva,text="Indique el ultimo año de visita")
+        ultAño.pack(padx=10,pady=8)
         ultAñoVisitaEntry = Entry(ventanaVisitaNueva,width=200)
-        ultAñoVisitaEntry.insert(0,'Ingrese el ultimo año de visita')
         ultAñoVisitaEntry.pack(pady=8)
+
+        totalEntry = Label(ventanaVisitaNueva,text="Indique el total de la factura")
+        totalEntry.pack(padx=10,pady=8)
         totalFacturaEntry =Entry(ventanaVisitaNueva,width=200)
-        totalFacturaEntry.insert(0,'Ingrese el total de la factura')
         totalFacturaEntry.pack(pady=8)
+
+        pagoLabel = Label(ventanaVisitaNueva,text="Indique la forma de pago")
+        pagoLabel.pack(padx=10,pady=8)
         formaPagoEntry = Entry(ventanaVisitaNueva,width=200)
-        formaPagoEntry.insert(0,'Ingrese la forma de pago')
         formaPagoEntry.pack(pady=8)
 
         añadirInformacionButton = Button(ventanaVisitaNueva, text='Añadir informacion',command=lambda:[sendVisitInfo(),ventanaVisitaNueva.destroy()])
@@ -293,19 +355,26 @@ def añadirTratamientos():
 
     ventanaTratamientoNuevo = Tk()
     ventanaTratamientoNuevo.title("Agregar tratamiento")
-    ventanaTratamientoNuevo.geometry("300x300")
+    ventanaTratamientoNuevo.geometry("300x500")
 
+    codLabel = Label(ventanaTratamientoNuevo,text="Indique el codigo de tratamiento a agregar")
+    codLabel.pack(padx=10,pady=8)
     codTratamientoEntry = Entry(ventanaTratamientoNuevo,width=200)
-    codTratamientoEntry.insert(0,'Ingrese el codigo del tratamiento')
     codTratamientoEntry.pack(pady=8)
+
+    nombreLabel = Label(ventanaTratamientoNuevo,text="Indique el nombre del tratamiento")
+    nombreLabel.pack(padx=10,pady=8)
     nombreTratamientoEntry = Entry(ventanaTratamientoNuevo,width=200)
-    nombreTratamientoEntry.insert(0,'Ingrese el nombre del tratamiento')
     nombreTratamientoEntry.pack(pady=8)
+
+    precioLabel = Label(ventanaTratamientoNuevo,text="Indique el precio del tratamiento")
+    precioLabel.pack(padx=10,pady=8)
     precioTratamientoEntry = Entry(ventanaTratamientoNuevo,width=200)
-    precioTratamientoEntry.insert(0,'Ingrese el precio del tratamiento')
     precioTratamientoEntry.pack(pady=8)
+
+    cantidadLabel = Label(ventanaTratamientoNuevo,text="Inddique la cantidad de tratamiento disponible")
+    cantidadLabel.pack(padx=10,pady=8)
     cantidadTratamientoEntry = Entry(ventanaTratamientoNuevo,width=200)
-    cantidadTratamientoEntry.insert(0,'Ingrese la cantidad disponible')
     cantidadTratamientoEntry.pack(pady=8)
 
     añadirInformacionButton = Button(ventanaTratamientoNuevo, text='Añadir informacion',command=lambda:[sendTreatInfo(),ventanaTratamientoNuevo.destroy()])
@@ -334,34 +403,49 @@ def añadirMedicacion():
 
         ventanaMedicacionNueva = Tk()
         ventanaMedicacionNueva.title("Agregar mediacion")
-        ventanaMedicacionNueva.geometry("300x500")
+        ventanaMedicacionNueva.geometry("300x700")
 
+        codAnimal = Label(ventanaMedicacionNueva,text="Indique el codigo de la mascota")
+        codAnimal.pack(padx=10,pady=8)
         codAnimalEntry = Entry(ventanaMedicacionNueva,width=200)
-        codAnimalEntry.insert(0,"Ingrese el codigo de la mascota")
         codAnimalEntry.pack(pady=8)
+
+        codMedicacion = Label(ventanaMedicacionNueva,text="Indique el codigo de medicacion a agregar")
+        codMedicacion.pack(padx=10,pady=8)
         codMedicacionEntry = Entry(ventanaMedicacionNueva,width=200)
-        codMedicacionEntry.insert(0,'Ingrese el codigo de medicacion')
         codMedicacionEntry.pack(pady=8)
+
+        ultDia = Label(ventanaMedicacionNueva,text="Ingrese el ultimo dia de visita")
+        ultDia.pack(padx=10,pady=8)
         ultDiaVisitaEntry = Entry(ventanaMedicacionNueva,width=200)
-        ultDiaVisitaEntry.insert(0,'Ingrese el ultimo dia de visita')
         ultDiaVisitaEntry.pack(pady=8)
+
+        ultMes = Label(ventanaMedicacionNueva,text="Indique el ultimo mes de visita")
+        ultMes.pack(padx=10,pady=8)
         ultMesVisitaEntry = Entry(ventanaMedicacionNueva,width=200)
-        ultMesVisitaEntry.insert(0, 'Ingrese el ultimo mes de visita')
         ultMesVisitaEntry.pack(pady=8)
+
+        ultYear = Label(ventanaMedicacionNueva,text="Indique el ultimo año de visita")
+        ultYear.pack(padx=10,pady=8)
         ultAñoVisitaEntry = Entry(ventanaMedicacionNueva,width=200)
-        ultAñoVisitaEntry.insert(0,"Ingrese el ultimo año de visita")
         ultAñoVisitaEntry.pack(pady=8)
+
+        medicamentosLabel = Label(ventanaMedicacionNueva, text="Idique los medicamentos a agregar")
+        medicamentosLabel.pack(padx=10,pady=8)
         medicamentosEntry = Entry(ventanaMedicacionNueva,width=200)
-        medicamentosEntry.insert(0,'Ingrese el medicamento')
         medicamentosEntry.pack(pady=8)
+
+        costoUnitarioLabel = Label(ventanaMedicacionNueva,text="Indique el costo unitario del tratamiento")
+        costoUnitarioLabel.pack(padx=10,pady=8)
         costoUnitarioEntry = Entry(ventanaMedicacionNueva,width=200)
-        costoUnitarioEntry.insert(0,'Ingrese el costo unitario del medicamento')
         costoUnitarioEntry.pack(pady=8)
+
+        cantidadLabel = Label(ventanaMedicacionNueva,text="Indique la cantidad de tratamiento utilizada")
+        cantidadLabel.pack(padx=10,pady=8)
         cantidadEntry = Entry(ventanaMedicacionNueva,width=200)
-        cantidadEntry.insert(0,'Ingrese la cantidad de medicamento')
         cantidadEntry.pack(pady=8)
 
-        añadirInformacionButton = Button(ventanaMedicacionNueva, text="Añadir informacion",command=[lambda:sendMedInfo(), ventanaMedicacionNueva.destroy()])
+        añadirInformacionButton = Button(ventanaMedicacionNueva, text="Añadir informacion",command=lambda:[sendMedInfo(), ventanaMedicacionNueva.destroy()])
         añadirInformacionButton.pack(pady=8)
 
         def sendMedInfo():

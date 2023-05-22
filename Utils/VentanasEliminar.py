@@ -11,10 +11,11 @@ def eliminarPais():
 
     ventanaPaisEliminado = Tk()
     ventanaPaisEliminado.title("Eliminar pais")
-    ventanaPaisEliminado.geometry("300x100")
+    ventanaPaisEliminado.geometry("300x150")
 
+    eliminarCodigoLabel = Label(ventanaPaisEliminado,text="Indique el codigo de pais a eliminar")
+    eliminarCodigoLabel.pack(padx=10,pady=8)
     eliminarCodigoEntry = Entry(ventanaPaisEliminado, width=200)
-    eliminarCodigoEntry.insert(0,"Digite el codigo de pais a eliminar")
     eliminarCodigoEntry.pack(pady=8, padx=10)
 
     eliminarCodigoButton = Button(ventanaPaisEliminado, text="Eliminar pais", command=lambda:[deleteCountry(),ventanaPaisEliminado.destroy()])
@@ -50,10 +51,11 @@ def eliminarCiudad():
 
     ventanaCiudadEliminada = Tk()
     ventanaCiudadEliminada.title("Eliminar ciudad")
-    ventanaCiudadEliminada.geometry("300x100")
+    ventanaCiudadEliminada.geometry("300x150")
 
+    eliminarCodigoLabel = Label(ventanaCiudadEliminada,text="Indique el codigo de ciudad a eliminar")
+    eliminarCodigoLabel.pack(padx=10,pady=8)
     eliminarCodigoEntry = Entry(ventanaCiudadEliminada, width=200)
-    eliminarCodigoEntry.insert(0,"Digite el codigo de ciudad a eliminar")
     eliminarCodigoEntry.pack(pady=8,padx=10)
 
     eliminarCodigoButton = Button(ventanaCiudadEliminada, text="Eliminar ciudad", command=lambda:[deleteCity(),ventanaCiudadEliminada.destroy()])
@@ -88,10 +90,11 @@ def eliminarCliente():
 
     ventanaClienteEliminado = Tk()
     ventanaClienteEliminado.title("Eliminar cliente")
-    ventanaClienteEliminado.geometry("300x100")
+    ventanaClienteEliminado.geometry("300x150")
 
+    eliminarCodigoLabel = Label(ventanaClienteEliminado,text="Indique el codigo de cliente a eliminar")
+    eliminarCodigoLabel.pack(padx=10,pady=8)
     eliminarCodigoEntry = Entry(ventanaClienteEliminado, width=200)
-    eliminarCodigoEntry.insert(0,"Digite el codigo de cliente a eliminar")
     eliminarCodigoEntry.pack(pady=8,padx=8)
 
     eliminarCodigoButton = Button(ventanaClienteEliminado, text="Eliminar cliente", command=lambda:[deleteClient(),ventanaClienteEliminado.destroy()])
@@ -126,10 +129,11 @@ def eliminarMascota():
 
     ventanaMascotaEliminada = Tk()
     ventanaMascotaEliminada.title("Eliminar mascota")
-    ventanaMascotaEliminada.geometry("300x100")
+    ventanaMascotaEliminada.geometry("300x150")
 
+    eliminarCodigoLabel = Label(ventanaMascotaEliminada,text="Indique el codigo de mascota a eliminar")
+    eliminarCodigoLabel.pack(padx=10,pady=8)
     eliminarMascotaEntry = Entry(ventanaMascotaEliminada, width=200)
-    eliminarMascotaEntry.insert(0,"Digite el codigo de mascota a eliminar")
     eliminarMascotaEntry.pack(pady=8,padx=10)
 
     eliminarMascotaButton = Button(ventanaMascotaEliminada, text="Eliminar mascota", command=lambda:[deletePet(),ventanaMascotaEliminada.destroy()])
@@ -164,10 +168,11 @@ def eliminarVisita():
 
     ventanaEliminarVisita = Tk()
     ventanaEliminarVisita.title("Eliminar visita")
-    ventanaEliminarVisita.geometry("300x100")
+    ventanaEliminarVisita.geometry("300x150")
 
+    eliminarCodigoLabel = Label(ventanaEliminarVisita,text="Indique el codigo de visita a eliminar")
+    eliminarCodigoLabel.pack(padx=10,pady=8)
     eliminarVisitaEntry = Entry(ventanaEliminarVisita, width=200)
-    eliminarVisitaEntry.insert(0,"Digite el codigo de visita a eliminar")
     eliminarVisitaEntry.pack(pady=8,padx=10)
 
     eliminarVisitaButton = Button(ventanaEliminarVisita, text="Eliminar visita", command=lambda:[deleteVisit(),ventanaEliminarVisita.destroy()])
@@ -202,10 +207,11 @@ def eliminarTratamiento():
 
     ventanaEliminarTratamiento = Tk()
     ventanaEliminarTratamiento.title("Eliminar tratamiento")
-    ventanaEliminarTratamiento.geometry("300x100")
+    ventanaEliminarTratamiento.geometry("300x150")
 
+    eliminarCodigoLabel = Label(ventanaEliminarTratamiento,text="Indique el codigo de tratamiento a eliminar")
+    eliminarCodigoLabel.pack(padx=10,pady=8)
     eliminarTratamientoEntry = Entry(ventanaEliminarTratamiento, width=200)
-    eliminarTratamientoEntry.insert(0,"Digite el codigo de visita a eliminar")
     eliminarTratamientoEntry.pack(pady=8,padx=10)
 
     eliminarTratamientoButton = Button(ventanaEliminarTratamiento, text="Eliminar tratamiento", command=lambda:[deleteTreat(),ventanaEliminarTratamiento.destroy()])
@@ -240,10 +246,11 @@ def eliminarMedicacion():
 
     ventanaEliminarMedicacion = Tk()
     ventanaEliminarMedicacion.title("Eliminar medicacion")
-    ventanaEliminarMedicacion.geometry("300x100")
+    ventanaEliminarMedicacion.geometry("300x150")
 
+    eliminarCodigoLabel = Label(ventanaEliminarMedicacion,text="Indique el codigo de medicacion a eliminar")
+    eliminarCodigoLabel.pack(padx=10,pady=8)
     eliminarMedicacionEntry = Entry(ventanaEliminarMedicacion, width=200)
-    eliminarMedicacionEntry.insert(0,"Digite el codigo de medicacion a eliminar")
     eliminarMedicacionEntry.pack(padx=10,pady=8)
 
     eliminarMedicacionButton = Button(ventanaEliminarMedicacion, text="Eliminar medicacion", command=lambda:[deleteMed(),ventanaEliminarMedicacion.destroy()])
