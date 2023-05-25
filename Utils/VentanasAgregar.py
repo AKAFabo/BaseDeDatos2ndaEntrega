@@ -92,55 +92,55 @@ def añadirCliente():
 
         ventanaClienteNuevo = Tk()
         ventanaClienteNuevo.title("Agregar cliente")
-        ventanaClienteNuevo.geometry("300x800")
+        ventanaClienteNuevo.geometry("300x650")
 
         codeClienteLabel = Label(ventanaClienteNuevo,text="Indique el codigo de cliente a agregar")
-        codeClienteLabel.pack(padx=10,pady=8)
+        codeClienteLabel.pack(padx=10)
         codeClienteEntry = Entry(ventanaClienteNuevo,width=200)
         codeClienteEntry.pack(pady=8,padx=10)
 
         nombreLabel = Label(ventanaClienteNuevo,text="Indique el nombre del cliente a agregar")
-        nombreLabel.pack(padx=10,pady=8)
+        nombreLabel.pack(padx=10)
         nombreClienteEntry = Entry(ventanaClienteNuevo,width=200)    
         nombreClienteEntry.pack(pady=8,padx=10)
 
         direccionLabel = Label(ventanaClienteNuevo, text="Indique la direccion del cliente a agregar")
-        direccionLabel.pack(padx=10,pady=8)
+        direccionLabel.pack(padx=10)
         direccionClienteEntry = Entry(ventanaClienteNuevo,width=200)
         direccionClienteEntry.pack(pady=8,padx=10)
 
         codePaisLabel = Label(ventanaClienteNuevo,text="Indique el codigo de pais del cliente")
-        codePaisLabel.pack(padx=10,pady=8)
+        codePaisLabel.pack(padx=10)
         codigoPaisEntry = Entry(ventanaClienteNuevo,width=200)
         codigoPaisEntry.pack(pady=8,padx=10)
 
         codeCiudadLabel = Label(ventanaClienteNuevo,text="Indique el codigo de ciudad del cliente")
-        codeCiudadLabel.pack(padx=10,pady=8)
+        codeCiudadLabel.pack(padx=10)
         codigoCiudadEntry = Entry(ventanaClienteNuevo,width=200)
         codigoCiudadEntry.pack(pady=8,padx=10)
 
         telLable = Label(ventanaClienteNuevo, text="Indique el telefono del cliente a agregar")
-        telLable.pack(padx=10,pady=8)
+        telLable.pack(padx=10)
         telClienteEntry = Entry(ventanaClienteNuevo,width=200)
         telClienteEntry.pack(pady=8,padx=10)
 
         ultDia = Label(ventanaClienteNuevo,text="Indique el ultimo dia de visita del cliente")
-        ultDia.pack(padx=10,pady=8)
+        ultDia.pack(padx=10)
         ultDiaVisita = Entry(ventanaClienteNuevo, width=200)
         ultDiaVisita.pack(pady=8,padx=10)
 
         ultMes = Label(ventanaClienteNuevo,text="Indique el ultimo mes de visita del cliente")
-        ultMes.pack(padx=10,pady=8)
+        ultMes.pack(padx=10)
         ultMesVisita = Entry(ventanaClienteNuevo, width=200)
         ultMesVisita.pack(pady=8,padx=10)
 
         ultYear = Label(ventanaClienteNuevo,text="Indique el ultimo año de visita del cliente")
-        ultYear.pack(padx=10,pady=8)
+        ultYear.pack(padx=10)
         ultAñoVisita = Entry(ventanaClienteNuevo,width=200)
         ultAñoVisita.pack(pady=8,padx=10)
 
         saldoLabel = Label(ventanaClienteNuevo,text="Indique el saldo del cliente a agregar")
-        saldoLabel.pack(padx=10,pady=8)
+        saldoLabel.pack(padx=10)
         saldoClienteEntry =  Entry(ventanaClienteNuevo, width=200)  
         saldoClienteEntry.pack(pady=8)
 

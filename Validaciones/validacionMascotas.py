@@ -10,6 +10,7 @@ def validacionMascota ():
     listCodeClientes = []
     listCodeMascotas = []
     PrimeraValidacion = []
+    repetidos = []
    
     validacionPetList = []
     
@@ -28,12 +29,16 @@ def validacionMascota ():
     ### VALIDACION DE CODIGOS DE MASCOTA ###
 
     for i in range(len(PrimeraValidacion)):
-        listCodeMascotas.append(int(PrimeraValidacion[i][1]))
+
+        if PrimeraValidacion[i][1] not in listCodeMascotas:
+            listCodeMascotas.append(int(PrimeraValidacion[i][1]))
     
     for i in range (len(PrimeraValidacion)):
+        if PrimeraValidacion[i][1] not in repetidos:
 
-        if int(PrimeraValidacion[i][1]) in listCodeMascotas:
-            validacionPetList.append(PrimeraValidacion[i])
+            if int(PrimeraValidacion[i][1]) in listCodeMascotas:
+                validacionPetList.append(PrimeraValidacion[i])
+                repetidos.append(PrimeraValidacion[i][1])
    
     return validacionPetList
 

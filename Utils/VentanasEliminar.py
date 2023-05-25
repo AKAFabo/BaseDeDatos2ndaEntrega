@@ -78,7 +78,7 @@ def eliminarCiudad():
             for i in range (len(codigosCiudadesValidos)):
 
                 if codigosCiudadesValidos[i] == codigo:
-                    ListaDeCiudades.pop(i)
+                    codigosCiudadesValidos.pop(i)
                     MessageBox.showinfo("Base de datos","La ciudad ha sido eliminada con exito")
                     break
 
@@ -149,8 +149,8 @@ def eliminarMascota():
 
             for i in range(len(ListaDeMascotas)):
 
-                if ListaDeClientes[i][1] == codigo:
-                    ListaDeClientes.pop(i)
+                if ListaDeMascotas[i][1] == codigo:
+                    ListaDeMascotas.pop(i)
                     break
             
             for i in range (len(codigosMascotasValidos)):
@@ -272,6 +272,7 @@ def eliminarMedicacion():
 
             for i in range(len(codigosMedicacionValidos)):
 
-                if codigosTratamientosValidos[i] == codigo:
-                    codigosTratamientosValidos.pop(i)
+                if codigosMedicacionValidos[i] == codigo:
+                    codigosMedicacionValidos.pop(i)
                     MessageBox.showinfo("Base de datos","La medicacion ha sido eliminada con exito")
+                    break

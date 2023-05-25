@@ -53,7 +53,7 @@ def generarFactura():
             for i in range(len(ListaDeClientes)):
 
                 if ListaDeClientes[i][0] == codigo:
-                    MessageBox.showinfo("La factura ha sido generada con exito")
+                    MessageBox.showinfo('Facturacion',"La factura ha sido generada con exito")
                     Client = ListaDeClientes[i]
 
                     break
