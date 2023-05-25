@@ -6,6 +6,7 @@ from Utils.VentanasFacturas import facturados
 from tkinter import *
 from tkinter import messagebox as MessageBox
 
+reportesSolicitados = []
 
 '''print("Selecciona la opcion que desea agregar al reporte:\n")
 
@@ -31,43 +32,43 @@ def menuReportes():
     princLabel = Label(ventanaGeneral,text="Seleccione la opcion que desea agregar al reporte")
     princLabel.pack(padx=10)
 
-    paises = Button(ventanaGeneral, text="Paises",command=lambda:reportePaises())
+    paises = Button(ventanaGeneral, text="Paises",command=lambda:[reportePaises(),ventanaGeneral.destroy()])
     paises.pack(padx=10,pady=8)
 
-    ciudades = Button(ventanaGeneral, text="Ciudades de un pais",command=lambda:reporteCiudades())
+    ciudades = Button(ventanaGeneral, text="Ciudades de un pais",command=lambda:[reporteCiudades()])
     ciudades.pack(padx=10, pady=8)
 
-    clientes = Button(ventanaGeneral,text="Clientes",command=lambda:reporteClientes())
+    clientes = Button(ventanaGeneral,text="Clientes",command=lambda:[reporteClientes(),ventanaGeneral.destroy()])
     clientes.pack(padx=10,pady=8)
 
-    mascotas = Button(ventanaGeneral,text="Mascotas de un cliente",command=lambda:reporteMascotasCliente())
+    mascotas = Button(ventanaGeneral,text="Mascotas de un cliente",command=lambda:[reporteMascotasCliente()])
     mascotas.pack(padx=10,pady=8)
 
-    visitas = Button(ventanaGeneral, text="Visitas de una mascota",command=lambda:reporteVisitas())
+    visitas = Button(ventanaGeneral, text="Visitas de una mascota",command=lambda:[reporteVisitas()])
     visitas.pack(padx=10,pady=8)
 
-    tratamientos = Button(ventanaGeneral, text="Tratamientos",command=lambda:reporteTratamientos())
+    tratamientos = Button(ventanaGeneral, text="Tratamientos",command=lambda:[reporteTratamientos(),ventanaGeneral.destroy()])
     tratamientos.pack(padx=10,pady=8)
 
-    ultMed = Button(ventanaGeneral,text='Ultima medicacion de una mascota',command=lambda:reporteTratamientosMascota())
+    ultMed = Button(ventanaGeneral,text='Ultima medicacion de una mascota',command=lambda:[reporteTratamientosMascota(),ventanaGeneral.destroy()])
     ultMed.pack(padx=10,pady=8)
 
-    saldo = Button(ventanaGeneral,text="Cliente con mas saldo",command=lambda:reporteSaldo())
+    saldo = Button(ventanaGeneral,text="Cliente con mas saldo",command=lambda:[reporteSaldo(),ventanaGeneral.destroy()])
     saldo.pack(padx=10,pady=8)
 
-    credito = Button (ventanaGeneral,text="Clientes con credito",command=lambda:reporteCredito())
+    credito = Button (ventanaGeneral,text="Clientes con credito",command=lambda:[reporteCredito(),ventanaGeneral.destroy()])
     credito.pack(padx=10,pady=8)
 
-    descuento = Button(ventanaGeneral,text="Clientes con mas descuento",command=lambda:reporteDescuento())
+    descuento = Button(ventanaGeneral,text="Clientes con mas descuento",command=lambda:[reporteDescuento(),ventanaGeneral.destroy()])
     descuento.pack(padx=10,pady=8)
 
-    ultTreat = Button(ventanaGeneral,text="Ultimo tratamiento usado",command=lambda:reporteUltimoTratamiento())
+    ultTreat = Button(ventanaGeneral,text="Ultimo tratamiento usado",command=lambda:[reporteUltimoTratamiento(),ventanaGeneral.destroy()])
     ultTreat.pack(padx=10,pady=8)
 
-    mostTreat = Button(ventanaGeneral,text="Tratamiento mas utilizado",command=lambda:reporteTratamientoUsado())
+    mostTreat = Button(ventanaGeneral,text="Tratamiento mas utilizado",command=lambda:[reporteTratamientoUsado(),ventanaGeneral.destroy()])
     mostTreat.pack(padx=10,pady=8)
 
-    masFacturado = Button(ventanaGeneral,text="Cliente que mas facturó",command=lambda:reporteFacturas())
+    masFacturado = Button(ventanaGeneral,text="Cliente que mas facturó",command=lambda:[reporteFacturas(),ventanaGeneral.destroy()])
     masFacturado.pack(padx=10,pady=8)
 
     def reportePaises():
@@ -83,6 +84,8 @@ def menuReportes():
             
         archivo.close()
 
+        reportesSolicitados.append('Reportes de paises')
+
     def reporteCiudades():
 
         archivo = open("Reportes.txt", "a")
@@ -95,7 +98,7 @@ def menuReportes():
         label.pack(padx=10)
         entry = Entry(ventanaCiudades, width=200)
         entry.pack(padx=10,pady=10)
-        sendCode = Button(ventanaCiudades,text="Generar reporte",command=lambda:reporteCiudadGenerado())
+        sendCode = Button(ventanaCiudades,text="Generar reporte",command=lambda:[reporteCiudadGenerado(),ventanaCiudades.destroy()])
         sendCode.pack(padx=10,pady=8)
 
         def reporteCiudadGenerado():
@@ -109,7 +112,7 @@ def menuReportes():
                     for i in range(len(ListaDePaises)):
 
                         if ListaDePaises[i][0] == codigoPais:
-                            archivo.write(f"Reporte de ciudades del pais {ListaDePaises[i]}:\n\n")
+                            archivo.write(f"\nReporte de ciudades del pais {ListaDePaises[i]}:\n\n")
                             break
                 
                     for i in range(len(ListaDeCiudades)):
@@ -119,6 +122,7 @@ def menuReportes():
 
                     MessageBox.showinfo('Reportes',"El reporte ha sido generado con exito")
                     archivo.close()
+                    reportesSolicitados.append(f"Reporte de ciudades del pais codigo {codigoPais}")
 
     def reporteClientes(): #Escribir toda la lista de clientes
 
@@ -132,6 +136,7 @@ def menuReportes():
             archivo.write(f"{ListaDeClientes[i]}\n")
 
         archivo.close()
+        reportesSolicitados.append('Reporte de clientes')
 
     def reporteMascotasCliente(): #Escribir las mascotas de un cliente
 
@@ -145,7 +150,7 @@ def menuReportes():
         label.pack(padx=10)
         entry = Entry(ventana, width=200)
         entry.pack(padx=10,pady=8)
-        sendInfo = Button(ventana,text="Generar reporte",command=lambda:reporteMascClientGenerado())
+        sendInfo = Button(ventana,text="Generar reporte",command=lambda:[reporteMascClientGenerado(),ventana.destroy()])
         sendInfo.pack(padx=10,pady=8)
 
         def reporteMascClientGenerado():
@@ -169,6 +174,7 @@ def menuReportes():
 
                 MessageBox.showinfo('Reportes',"El reporte ha sido generado con exito")
                 archivo.close()
+                reportesSolicitados.append(f'Reporte de mascotas del cliente codigo {codigoCliente}')
 
     def reporteVisitas():
 
@@ -182,7 +188,7 @@ def menuReportes():
         label.pack(padx=10,pady=8)
         entry = Entry(ventana,width=200)
         entry.pack(padx=10,pady=8)
-        sendInfo = Button(ventana,text="Generar reporte",command=lambda:reporteVisitasGenerado())
+        sendInfo = Button(ventana,text="Generar reporte",command=lambda:[reporteVisitasGenerado(),ventana.destroy()])
         sendInfo.pack(padx=10,pady=8)
 
         def reporteVisitasGenerado():
@@ -203,6 +209,7 @@ def menuReportes():
 
                 MessageBox.showinfo('Reportes',"El reporte ha sido generado con exito")
                 archivo.close()
+                reportesSolicitados.append(f'Reporte de las visitas de la mascota codigo {codigoMascota}')
  
     def reporteTratamientos():
 
@@ -217,6 +224,7 @@ def menuReportes():
             archivo.write(F"{ListaDeTratamientos[i]}\n")
             
         archivo.close()
+        reportesSolicitados.append("Reporte de tratamientos")
 
     def reporteTratamientosMascota():
 
@@ -228,7 +236,7 @@ def menuReportes():
         label.pack(padx=10)
         entry = Entry(ventana,width=200)
         entry.pack(padx=10,pady=8)
-        sendInfo = Button(ventana,text="Generar reporte",command=lambda:reporteTratamientoMascotaGenerado())
+        sendInfo = Button(ventana,text="Generar reporte",command=lambda:[reporteTratamientoMascotaGenerado(),ventana.destroy()])
         sendInfo.pack(padx=10,pady=8)
 
         def reporteTratamientoMascotaGenerado():
@@ -286,6 +294,7 @@ def menuReportes():
                         archivo.write(F"{listTemp[posicionReciente]}\n")
 
                         archivo.close()
+                        reportesSolicitados.append(f"Reporte de tratamientos de la mascota codigo {codigoMascota}")
                         break
 
     def reporteSaldo(): #Escribir cliente con mas saldo
@@ -318,6 +327,7 @@ def menuReportes():
                     maxCliente = ListaDeClientes[i][0]
 
         archivo.write(f"El cliente con mas saldo es el cliente codigo {maxCliente}, con un saldo total de: {maxSaldo}")
+        reportesSolicitados.append("Reporte de cliente con mas saldo")
 
     def reporteCredito(): #Escribir clientes que paguen con credito (ListaDeVisitas 02)
 
@@ -362,6 +372,7 @@ def menuReportes():
             archivo.write(F"{ListClientesCred[i]}\n")
 
         archivo.close()
+        reportesSolicitados.append("Reporte de clientes de credito")
 
     def reporteDescuento():
 
@@ -391,6 +402,7 @@ def menuReportes():
                 archivo.write(f"{ListaDeClientes[i]}\n")
 
         archivo.close()
+        reportesSolicitados.append("Reporte de clientes con mas descuento")
         
     def reporteUltimoTratamiento():
 
@@ -403,7 +415,7 @@ def menuReportes():
 
         MessageBox.showinfo('Reportes',"Se ha añadido el ultimo tratamiento al reporte")
 
-        archivo.write(F"\nReporte: Ultimo tratamiento\n\n")
+        archivo.write(F"\n\nReporte: Ultimo tratamiento\n\n")
 
         for i in range(0,len(ListaDeMedicacion)):
             
@@ -426,6 +438,7 @@ def menuReportes():
                 break
 
         archivo.close()
+        reportesSolicitados.append("Reporte del ultimo tratamiento usado")
 
     def reporteTratamientoUsado():
 
@@ -469,6 +482,7 @@ def menuReportes():
                 archivo.write(F"{ListaDeTratamientos[i]}\n\n")
 
         archivo.close()
+        reportesSolicitados.append("Reporte del tratamiento mas usado")
 
     def reporteFacturas():
 
@@ -495,8 +509,13 @@ def menuReportes():
                         elemento_mas_repetido = elemento
 
                 archivo.write(f"El cliente que mas facturo es el cliente codigo: {elemento_mas_repetido}")
+                reportesSolicitados.append("Reporte del cliente que mas facturó")
                 break
             
         archivo.close()
 
     ventanaGeneral.mainloop()
+
+def verReportesSolicitados():
+
+    MessageBox.showinfo('Reportes solicitados',f"Los reportes solicitados son\n{reportesSolicitados}")

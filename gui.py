@@ -46,7 +46,7 @@ from Utils.VentanasAgregar import añadirPais, añadirCiudad, añadirCliente, a�
 from Utils.VentanasEliminar import eliminarPais, eliminarCiudad, eliminarCliente, eliminarMascota, eliminarVisita, eliminarMedicacion, eliminarTratamiento
 from Utils.VentanasBuscar import buscarPais, buscarCiudad, buscarCliente, buscarMascota, buscarMedicacion, buscarTratamiento, buscarVisita
 from Utils.ventanasModificar import modificarPais, modificarCiudad, modificarCliente, modificarMascota, modificarVisita, modificarTratamiento,modificarMedicacion
-from Utils.reportes import menuReportes
+from Utils.reportes import menuReportes, verReportesSolicitados
 from Utils.VentanasFacturas import generarFactura, consultarDescuento, consultarSaldo
 
 listaDeContactos = []
@@ -282,7 +282,7 @@ def openReportesMenu():
     reportesFrame = Frame(reportesContainer)
     reportesFrame.pack()
 
-    verReportesButton = Button(reportesFrame,text="Ver reportes solicitados")
+    verReportesButton = Button(reportesFrame,text="Ver reportes solicitados",command=lambda:verReportesSolicitados())
     verReportesButton.pack(pady=8)
 
     solicitarReportesButton = Button(reportesFrame, text="Solicitar reportes",command=lambda:menuReportes())
