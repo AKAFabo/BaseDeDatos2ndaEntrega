@@ -1,25 +1,25 @@
-1634;AlejandroArroyo;Bury;2;141;94678203;23;3;64;458312     #Ciudad y pais invalido
-1202;MartaCastillo;NewYork;0;189;37508214;17;8;17;874335
-1950;CristianHerrera;Napoles;31;129;69098347;2;6;55;179174                 #
-1335;SilviaGarcia;Perth;49;108;86160759;16;10;33;790568                 #
-1429;JavierGutierrez;Canton;9;106;57620422;26;2;85;274298
-1361;LuciaFlores;Londres;39;183;81002152;5;5;42;43162
-1819;SantiagoRamos;SaoPaulo;7;146;70631215;13;4;97;892739
-1349;AliciaRios;Surabaya;20;151;10834912;19;8;16;258421
-1532;FernandoJimenez;Moscu;2;141;50715731;8;10;98;609315        #
-1824;AndreaGuerrero;Sapporo;24;113;53758798;3;7;54;341970
-1105;DiegoMorales;Hamburgo;13;184;76503265;15;5;73;17860
-1631;AnaOrtiz;Yakarta;20;147;45221131;19;8;14;731849                 
-1420;RobertoSanchez;Daegu;46;183;91673351;12;11;59;831443           #
-1301;MariaGonzalez;Riad;45;192;68085731;6;1;45;367482                 #
-1287;HugoHernandez;SanPetersburgo;2;124;68679042;25;2;91;510281         #
-1199;AdrianaFlores;Guadalajara;14;154;35061789;28;11;62;222614                 #
-1948;JuanCruz;Estambul;38;117;97893074;6;1;50;928149
-1471;ValentinaRojas;Phoenix;0;103;78613897;10;6;72;26220            #
-1661;DiegoGomez;Medan;20;182;13245688;18;8;34;647020
-1766;NataliaTorres;Seul;46;155;38430265;2;7;81;203457
-1886;PedroPerez;Marsella;42;129;63141054;1;8;95;368579
-1292;IsabelMartinez;Brisbane;49;125;79268849;22;2;39;287416
+1634;AlejandroArroyo;Bury;2;141;94678203;23;3;64;5;50000     #Ciudad y pais invalido
+1202;MartaCastillo;NewYork;0;189;37508214;17;8;17;5;50000 
+1950;CristianHerrera;Napoles;31;129;69098347;2;6;55;5;50000                  #
+1335;SilviaGarcia;Perth;49;108;86160759;16;10;33;5;50000                  #
+1429;JavierGutierrez;Canton;9;106;57620422;26;2;85;5;50000 
+1361;LuciaFlores;Londres;39;183;81002152;5;5;42;5;50000 
+1819;SantiagoRamos;SaoPaulo;7;146;70631215;13;4;97;5;50000 
+1349;AliciaRios;Surabaya;20;151;10834912;19;8;16;5;50000 
+1532;FernandoJimenez;Moscu;2;141;50715731;8;10;98;5;50000         #
+1824;AndreaGuerrero;Sapporo;24;113;53758798;3;7;54;5;50000 
+1105;DiegoMorales;Hamburgo;13;184;76503265;15;5;73;5;50000 
+1631;AnaOrtiz;Yakarta;20;147;45221131;19;8;14;5;70000                 
+1420;RobertoSanchez;Daegu;46;183;91673351;12;11;59;5;50000           #
+1301;MariaGonzalez;Riad;45;192;68085731;6;1;45;5;50000                 #
+1287;HugoHernandez;SanPetersburgo;2;124;68679042;25;2;91;5;50000         #
+1199;AdrianaFlores;Guadalajara;14;154;35061789;28;11;62;5;50000                 #
+1948;JuanCruz;Estambul;38;117;97893074;6;1;50;5;50000 
+1471;ValentinaRojas;Phoenix;0;103;78613897;10;6;72;5;50000             #
+1661;DiegoGomez;Medan;20;182;13245688;18;8;34;5;50000 
+1766;NataliaTorres;Seul;46;155;38430265;2;7;81;5;50100
+1886;PedroPerez;Marsella;42;129;63141054;1;8;95;5;50101 
+1292;IsabelMartinez;Brisbane;49;125;79268849;22;2;39;5;50000 
 
 1202;REPETIDO;NewYork;0;189;37508214;17;8;17;874335                 #
 1349;REPETIDO;Surabaya;20;182;10834912;19;8;16;2                 #

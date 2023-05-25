@@ -46,6 +46,8 @@ from Utils.VentanasAgregar import añadirPais, añadirCiudad, añadirCliente, a�
 from Utils.VentanasEliminar import eliminarPais, eliminarCiudad, eliminarCliente, eliminarMascota, eliminarVisita, eliminarMedicacion, eliminarTratamiento
 from Utils.VentanasBuscar import buscarPais, buscarCiudad, buscarCliente, buscarMascota, buscarMedicacion, buscarTratamiento, buscarVisita
 from Utils.ventanasModificar import modificarPais, modificarCiudad, modificarCliente, modificarMascota, modificarVisita, modificarTratamiento,modificarMedicacion
+from Utils.reportes import menuReportes
+from Utils.VentanasFacturas import generarFactura, consultarDescuento, consultarSaldo
 
 listaDeContactos = []
 
@@ -283,7 +285,7 @@ def openReportesMenu():
     verReportesButton = Button(reportesFrame,text="Ver reportes solicitados")
     verReportesButton.pack(pady=8)
 
-    solicitarReportesButton = Button(reportesFrame, text="Solicitar reportes")
+    solicitarReportesButton = Button(reportesFrame, text="Solicitar reportes",command=lambda:menuReportes())
     solicitarReportesButton.pack(pady=8)
 
     cerrarReportesContainer = Button(reportesFrame, text="Cerrar ventana",command=reportesFrame.destroy)
@@ -300,13 +302,13 @@ def openFacturacionMenu():
     facturacionFrame = Frame(facturacionContainer)
     facturacionFrame.pack()
 
-    saldosButton = Button(facturacionFrame, text="Ver saldos de clientes")
+    saldosButton = Button(facturacionFrame, text="Saldos de clientes", command=consultarSaldo)
     saldosButton.pack(pady=8)
 
-    descuentosButton = Button(facturacionFrame,text="Ver descuentos de clientes")
+    descuentosButton = Button(facturacionFrame,text="Descuentos de clientes", command=consultarDescuento)
     descuentosButton.pack(pady=8)
 
-    facturacionButton = Button(facturacionFrame, text="Ver facturacion de clientes")
+    facturacionButton = Button(facturacionFrame, text="Facturacion de clientes", command=generarFactura)
     facturacionButton.pack(pady=8)
 
     cerrarFacturacion = Button(facturacionFrame, text="Cerrar ventana", command=facturacionFrame.destroy)
@@ -399,16 +401,16 @@ def openfacturacionMenu():
     facturacionFrame = Frame(facturacionContainer)
     facturacionFrame.pack(side='left')
 
-    facturacionButton = Button(facturacionFrame, text="Facturación",image=ImagenFacturacionSub,compound="top",command=lambda:[openSubmenuFacturacionMenu(),submenuDescuentosContainer.destroy(),submenuSaldoContainer.destroy()])
+    facturacionButton = Button(facturacionFrame, text="Facturación",image=ImagenFacturacionSub,compound="top",command=generarFactura)
     facturacionButton.pack(pady=12,padx=10)
 
-    descuentoButton = Button(facturacionFrame, text="Descuento",image=ImagenDescuentos,compound="top",command=lambda:[openSubmenuDescuentosMenu(),submenuFacturacionContainer.destroy(),submenuSaldoContainer.destroy()])
+    descuentoButton = Button(facturacionFrame, text="Descuento",image=ImagenDescuentos,compound="top",command=consultarDescuento)
     descuentoButton.pack(pady=12,padx=10)
 
-    saldoButton = Button(facturacionFrame, text="Saldo",image=ImagenSaldo,compound="top",command=lambda:[openSubmenuSaldoMenu(),submenuFacturacionContainer.destroy(),submenuDescuentosContainer.destroy()])
+    saldoButton = Button(facturacionFrame, text="Saldo",image=ImagenSaldo,compound="top",command=consultarSaldo)
     saldoButton.pack(pady=12,padx=10)
 
-    facturacionCerrarButton = Button(facturacionFrame, text="Cerrar",image=ImagenX,compound="top",command=lambda:[facturacionContainer.destroy(),submenuFacturacionContainer.destroy(),submenuDescuentosContainer.destroy(),submenuSaldoContainer.destroy()])
+    facturacionCerrarButton = Button(facturacionFrame, text="Cerrar",image=ImagenX,compound="top",command=lambda:[facturacionContainer.destroy()])
     facturacionCerrarButton.pack(pady=12,padx=10)
 
 

@@ -469,6 +469,21 @@ def añadirMedicacion():
                     nuevaMedicacion = [codAnimal,codMedicacion,dia,mes,año,medicamentos,costoUnitario,cantidad,costoTotal]
                     ListaDeMedicacion.append(nuevaMedicacion)
                     codigosMedicacionValidos.append(codMedicacion)
-                    MessageBox.showinfo('Base de datos',"La medicacion ha sido agregada con exito")
+                    
+            for i in range (len(ListaDeTratamientos)):
+
+                if cantidad > int(ListaDeTratamientos[i][3]):
+                    MessageBox.showerror('Error','Se esta intentando vender mas tratamiento del disponible')
+                    break
+
+                else:
+
+                    if ListaDeTratamientos[i][0] == medicamentos:
+                        
+
+                        nuevaCantidad = (int(ListaDeTratamientos[i][3]) - cantidad)
+                        ListaDeTratamientos[i][3] = nuevaCantidad
+                        MessageBox.showinfo('Base de datos',"La medicacion ha sido agregada con exito")
+                        break
 
         ventanaMedicacionNueva.mainloop()
