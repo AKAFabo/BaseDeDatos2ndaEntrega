@@ -179,7 +179,7 @@ def añadirCliente():
                     if codigoCiudad not in codigosCiudadesValidos:
                         MessageBox.showerror("Error","El codigo de ciudad es invalido")
                     else:
-                        nuevoCliente = [codigoCliente,nombreCliente,direccion,codigoPais,codigoCiudad,telefono,diaVisita,mesVisita,añoVisita,saldo,descuento]
+                        nuevoCliente = [codigoCliente,nombreCliente,direccion,codigoPais,codigoCiudad,telefono,diaVisita,mesVisita,añoVisita,descuento,saldo]
                         ListaDeClientes.append(nuevoCliente)
                         codigosClientesValidos.append(codigoCliente)
                         MessageBox.showinfo("Base de datos","El cliente ha sido agregado con exito")
